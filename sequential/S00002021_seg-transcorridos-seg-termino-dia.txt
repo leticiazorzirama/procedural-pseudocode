@@ -1,0 +1,16 @@
+# Faça um algoritmo que leia o horário atual em (horas, minutos e segundos).  
+# Após essas 3 leituras, escreva duas informações:  1-quantos segundos ja se passaram desde que o dia iniciou,  2-quantos segundos ainda faltam até o dia terminar.
+
+var
+
+  horas, minutos, segundos, segundos_passados, segundos_faltantes : inteiro
+
+inicio
+
+  leia(horas, minutos, segundos) 
+  segundos_passados <- (horas * 3600) + (minutos * 60) + segundos 
+  segundos_faltantes <- 86400 - segundos_passados 
+  escreva(segundos_passados, segundos_faltantes) 
+
+fimalgoritmo
+

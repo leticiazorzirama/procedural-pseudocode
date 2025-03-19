@@ -1,0 +1,18 @@
+# Faça um algoritmo que leia um horário (hora, minuto e segundo) e escreva o horário correspondente ao segundo seguinte. Ex: se for lido, 17,21,36 escrever 17,21,37. 
+# Considere que os horários (lido e escrito) estão na faixa de 00:00:00 a 23:59:59.
+
+var
+
+  h, m, s, segundos, hora_seguinte, minuto_seguinte, segundos_seguinte : inteiro
+
+inicio
+
+  leia(h, m, s) 
+  segundos <- (h*3600) + (m*60) + s 
+  segundos <- segundos + 1 
+  hora_seguinte <- (segundos\3600)% 24 
+  minuto_seguinte <- (segundos% 3600)\60 
+  segundos_seguinte <- (segundos% 3600)% 60 
+  escreva(hora_seguinte, minuto_seguinte, segundos_seguinte) 
+
+fimalgoritmo 

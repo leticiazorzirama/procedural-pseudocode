@@ -1,0 +1,14 @@
+# Faça um algoritmo que leia 3 valores escreva o maior deles. 
+
+var
+
+  v1, v2, v3, maior1, maior2 : real
+
+inicio
+
+  leia(v1, v2, v3) 
+  maior1 <- (v1+v2+abs(v1-v2))/2 
+  maior2 <- (maior1+v3+abs(maior1-v3))/2 
+  escreva(maior2) 
+
+fimalgoritmo

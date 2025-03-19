@@ -1,0 +1,30 @@
+# Fazer um algoritmo que leia um valor inteiro (representando uma quantidade monetária em reais) e escreva a quantidade mínima 
+# de cédulas de 200, 100, 50, 20, 10, 5, 2 e moeda de 1 para representar esse valor. 
+# Exemplo: Caso o valor seja 1446 reais deve escrever: 7 nota(s) de duzentos reais; 0 nota(s) de cem reais; 0 nota(s) de cinquenta reais; 2 nota(s) de vinte reais; 0 nota(s) de dez reais; 1 nota(s) de cinco reais; 0 nota(s) de dois reais; 1 moeda(s) de um real. 
+
+var
+
+  x, duzentos, cem, cinquenta, vinte, dez, cinco, dois, um : inteiro
+
+inicio
+
+  leia(x) 
+  duzentos <- x\200 
+  x <- x - (duzentos * 200) 
+  cem <- x\100 
+  x <- x - (cem * 100) 
+  cinquenta <- x\50 
+  x <- x - (cinquenta * 50) 
+  vinte <- x\20 
+  x <- x - (vinte * 20) 
+  dez <- x\10 
+  x <- x - (dez * 10) 
+  cinco <- x\5 
+  x <- x - (cinco * 5) 
+  dois <- x\2 
+  x <- x - (dois * 2) 
+  um <- x\1 
+
+  escreva(duzentos, "nota(s) de duzentos reais;", cem,"nota(s) de cem reais;", cinquenta,"nota(s) de cinquenta reais;", vinte,"nota(s) de vinte reais;", dez,"nota(s) de dez reais;", cinco,"nota(s) de cinco reais;", dois,"nota(s) de dois reais;", um,"moeda(s) de um real.") 
+
+fimalgoritmo

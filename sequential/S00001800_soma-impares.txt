@@ -1,0 +1,18 @@
+# Faça um algoritmo que leia 5 números inteiros e escreva a soma dos que forem ímpares.        
+
+var
+
+  a, b, c, d, f, impares : inteiro
+
+inicio
+
+  leia(a, b, c, d, f) 
+  a <- (a % 2)*a 
+  b <- (b % 2)*b 
+  c <- (c % 2)*c 
+  d <- (d % 2)*d 
+  f <- (f % 2)*f 
+  impares <- a + b + c + d + f 
+  escreva(impares) 
+
+fimalgoritmo

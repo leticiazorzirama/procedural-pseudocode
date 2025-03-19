@@ -1,0 +1,12 @@
+# Faça um algoritmo que leia dois valores inteiros e escreva a sua soma.
+
+var
+         a, b, soma : inteiro
+
+inicio
+         escreval("Digite dois números inteiros:")
+         leia(a, b)
+         soma <- a + b
+         escreva(soma)
+
+fimalgoritmo

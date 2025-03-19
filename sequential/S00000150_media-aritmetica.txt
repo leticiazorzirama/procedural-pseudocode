@@ -1,0 +1,12 @@
+# Faça um algoritmo que leia 3 valores reais, notas de um aluno, e escreva sua média aritmética.
+
+var
+         a , b , c , media : real
+
+inicio
+         escreval("Digite as 3 notas:")         
+         leia(a, b, c)
+         media <- (a + b + c)/3
+         escreva("A média aritmética das notas é: ", media)
+
+fimalgoritmo

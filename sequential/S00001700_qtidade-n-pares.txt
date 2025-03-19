@@ -1,0 +1,19 @@
+# Faça um algoritmo que leia 5 números inteiros e escreva a quantidade deles que são pares.   
+
+var
+
+  a, b, c, d, f, soma, pares : inteiro
+
+inicio
+
+  leia(a, b, c, d, f) 
+  a <- a % 2 
+  b <- b % 2 
+  c <- c % 2 
+  d <- d % 2 
+  f <- f % 2 
+  soma <- a + b + c + d + f 
+  pares <- 5 - soma 
+  escreva(pares) 
+
+fimalgoritmo

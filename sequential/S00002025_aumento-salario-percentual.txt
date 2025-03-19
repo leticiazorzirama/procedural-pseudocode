@@ -1,0 +1,18 @@
+# Considerando que o aumento dos funcionários de uma empresa tenha sido definido da seguinte forma: 80% de um índice chamado INTEMP e mais um percentual de produtividade
+# discutido com a empresa por ocasião do dissídio da categoria. Escrever um algoritmo que lê o número do funcionário, seu salário atual, o valor do INTEMP e o índice de produtividade
+# conquistado e escreve o número do funcionário, seu aumento e seu novo salário. 
+
+var
+
+  funcionario, salario_atual, intemp, produtividade, aumento, novo_salario, aumento_intemp, aumento_produtividade : real
+
+inicio
+
+  leia(funcionario, salario_atual, intemp, produtividade) 
+  aumento_intemp <- (salario_atual * (intemp * 80) /100) /100 
+  aumento_produtividade <- (produtividade * salario_atual) /100 
+  aumento <- aumento_intemp + aumento_produtividade 
+  novo_salario <- salario_atual + aumento 
+  escreva(funcionario, aumento, novo_salario) 
+
+fimalgoritmo

@@ -1,0 +1,27 @@
+# Faça um algoritmo que lê um valor inteiro em reais e calcula e escreve qual o menor número possível de notas de 100,50,20,10,5,2 e 1 real em que o valor pode ser decomposto. 
+
+var
+
+  x, cem, cinquenta, vinte, dez, cinco, dois, um, cedulas : inteiro
+
+inicio
+
+  leia(x) 
+  cem <- x\100 
+  x <- x - (cem * 100) 
+  cinquenta <- x\50 
+  x <- x - (cinquenta * 50) 
+  vinte <- x\20 
+  x <- x - (vinte * 20) 
+  dez <- x\10 
+  x <- x - (dez * 10) 
+  cinco <- x\5 
+  x <- x - (cinco * 5) 
+  dois <- x\2 
+  x <- x - (dois * 2) 
+  um <- x\1 
+
+  //cedulas <- cem + cinquenta + vinte + dez + cinco + dois + um
+  escreva(cem, cinquenta, vinte, dez, cinco, dois, um) 
+
+fimalgoritmo

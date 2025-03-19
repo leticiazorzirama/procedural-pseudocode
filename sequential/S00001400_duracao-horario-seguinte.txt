@@ -1,0 +1,17 @@
+# Faça um algoritmo que leia um horário (hora, minuto, segundo) e uma quantidade de segundos transcorridos, e calcule e escreva o segundo horário.
+
+var
+
+  h, m, s, segundos_transcorridos, hora, minuto, segundos : inteiro
+
+inicio
+
+  leia(h, m, s, segundos_transcorridos) 
+  segundos <- (h*3600) + (m*60) + s 
+  segundos <- segundos + segundos_transcorridos 
+  hora <- (segundos\3600)% 24 
+  minuto <- (segundos% 3600)\60 
+  segundos <- (segundos% 3600)% 60 
+  escreva(hora, minuto, segundos) 
+
+fimalgoritmo

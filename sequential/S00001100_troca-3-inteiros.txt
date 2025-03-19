@@ -1,0 +1,16 @@
+# Faça um algoritmo que leia 3 valores v1, v2 e v3, e troque os valores entre si de modo que ao final a variável v2 contenha o valor que foi lido para v1, a variável v3 contenha o valor que foi lido para v2, e a variável v1 contenha o valor que foi lido para a variável v3.
+
+var
+
+  v1, v2, v3, aux : inteiro
+
+inicio
+
+  leia(v1, v2, v3) 
+  aux <- v3 
+  v3 <- v2 
+  v2 <- v1 
+  v1 <- aux 
+  escreva(v1, v2, v3) 
+
+fimalgoritmo 

@@ -1,0 +1,15 @@
+# Um consumidor está adquirindo dois produtos em uma loja. 
+# Fazer um algoritmo que leia o valor unitário e a quantidade do primeiro produto, depois leia o valor unitário e a quantidade do segundo produto e escreva o valor que deve ser pago pelo consumidor para efetuar essa compra.
+
+var
+
+  valor_unitario_um, quantidade_um, valor_unitario_dois, quantidade_dois, subtotal_um, subtotal_dois : real
+
+inicio
+
+  leia(valor_unitario_um, quantidade_um, valor_unitario_dois, quantidade_dois) 
+  subtotal_um <- valor_unitario_um * quantidade_um 
+  subtotal_dois <- valor_unitario_dois * quantidade_dois 
+  escreva(subtotal_um + subtotal_dois) 
+
+fimalgoritmo

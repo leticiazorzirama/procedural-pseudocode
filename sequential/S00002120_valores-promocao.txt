@@ -1,0 +1,14 @@
+# Uma loja está praticando uma promoção do tipo leve 3 pague 2. Fazer um algoritmo que leia a quandidade de itens que o consumidor está comprando e escreva quantos itens ele deve pagar.
+# Exemplos: Comprando 1, será pago 1; comprando 2; serão pagos 2; comprando 3, serão pagos 2; comprando 4, serão pagos 3; comprando 5, serão pagos 4; comprando 6, serão pagos 4.
+
+var
+
+  itens, a_pagar : inteiro
+
+inicio
+
+  leia(itens) 
+  a_pagar <- itens-(itens\3) 
+  escreva(a_pagar)
+
+fimalgoritmo 

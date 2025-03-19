@@ -1,0 +1,19 @@
+# Faça um algoritmo que leia um valor em binário até 6 dígitos e escreva o número correspondente em decimal.
+
+var
+
+  x, bin1, bin2, bin3, bin4, bin5, bin6, soma : inteiro
+
+inicio
+
+  leia(x) 
+  bin1 <- (x\100000)*2^5 
+  bin2 <- ((x\10000)% 10)*2^4 
+  bin3 <- ((x\1000)% 10)*2^3 
+  bin4 <- ((x\100)% 10)*2^2 
+  bin5 <- ((x\10)% 10)*2^1 
+  bin6 <- (x% 10)*2^0 
+  soma <- bin1 + bin2 + bin3 + bin4 + bin5 + bin6 
+  escreva(soma) 
+
+fimalgoritmo

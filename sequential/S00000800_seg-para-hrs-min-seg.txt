@@ -1,0 +1,15 @@
+# Faça um algoritmo que lê uma quantia inteira em segundos e escreva o número de horas, minutos e segundos correspondente. 
+
+var
+
+  horas, minutos, segundos : inteiro
+
+inicio
+
+  leia(segundos) 
+  horas <- segundos\3600 
+  minutos <- (segundos% 3600)\60 
+  segundos <- (segundos% 3600)% 60 
+  escreva(horas,minutos,segundos) 
+
+fimalgoritmo

@@ -1,0 +1,17 @@
+# Escrever um algoritmo que lê o número de peças do tipo 1, o valor de cada peça do tipo 1, o número de peças do tipo 2, 
+# o valor de cada peça do tipo 2 e o percentual do IPI a ser acrescentado. 
+# O algoritmo deve calcular e escrever o valor total a ser pago por esta compra. 
+
+var
+
+  peca1, valor_peca1, peca2, valor_peca2, percentual_ipi, subtotal1, subtotal2, total : real
+
+inicio
+
+  leia(peca1, valor_peca1, peca2, valor_peca2, percentual_ipi) 
+  subtotal1 <- ((peca1 * valor_peca1)) * ((100 + percentual_ipi)/100) 
+  subtotal2 <- ((peca2 * valor_peca2)) * ((100 + percentual_ipi)/100) 
+  total <- subtotal1 + subtotal2 
+  escreva(total) 
+
+fimalgoritmo

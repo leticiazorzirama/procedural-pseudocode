@@ -1,0 +1,23 @@
+# Uma autolocadora aluga seus carros com uma taxa fixa por dia mais uma taxa por km rodado,
+# e oferece desconto percentual sobre a taxa fixa de aluguel por dia. 
+
+# Escrever um algoritmo que lê a taxa fixa por dia (em reais), o percentual de desconto na taxa fixa por dia, 
+# a taxa por Km rodado (em reais), o número de dias e o número de Km rodados.
+# O algoritmo deve calcular e escrever: o valor total do aluguel (já aplicado o desconto), o percentual de desconto, o valor do desconto em reais,
+# o número de dias, e a quilometragem rodada. Dica:O desconto incide apenas sobre a taxa diária.
+
+var
+
+  taxa_fixa, desconto, taxa_km, dias, km_rodados, desconto_reais, desconto_total, valor_total_aluguel : real
+
+inicio
+
+  leia(taxa_fixa, desconto, taxa_km, dias, km_rodados) 
+  desconto_reais <- (taxa_fixa * desconto)/100 
+  desconto_total <- desconto_reais * dias 
+  taxa_fixa <- (taxa_fixa - desconto_reais) * dias 
+  taxa_km <- taxa_km * km_rodados 
+  valor_total_aluguel <- taxa_fixa + taxa_km 
+  escreva(valor_total_aluguel, desconto, desconto_total, dias, km_rodados) 
+
+fimalgoritmo 

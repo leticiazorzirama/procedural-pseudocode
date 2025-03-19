@@ -1,0 +1,12 @@
+# Faça um algoritmo que leia 2 valores reais v1 e v2 e calcule e escreva a área do triângulo que tem base igual a v1 e altura igual a v2. 
+
+var
+
+         v1, v2, area_triangulo : real
+
+inicio
+         leia(v1, v2)
+         area_triangulo <- (v1*v2)/2
+         escreva("A área do triângulo é", area_triangulo)
+
+fimalgoritmo

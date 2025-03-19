@@ -1,0 +1,16 @@
+# Faça um algoritmo que leia duas informações: a metragem de um terreno em metros e a metragem da casa terrea que se deseja construir nesse terreno. 
+# Após as leituras escreva duas novas informações: percentagem de ocupação do terreno e número de metros que ficaram desocupados. 
+
+var
+
+  metragem_terreno, metragem_casa, metros_desocupados, percentagem_ocupacao_terreno : real
+
+inicio
+
+  leia(metragem_terreno, metragem_casa) 
+  metros_desocupados <- metragem_terreno - metragem_casa 
+  percentagem_ocupacao_terreno <- (metragem_casa * 100)/metragem_terreno 
+  escreva(percentagem_ocupacao_terreno, metros_desocupados) 
+
+fimalgoritmo
+

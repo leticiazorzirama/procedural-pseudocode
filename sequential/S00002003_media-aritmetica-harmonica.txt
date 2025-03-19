@@ -1,0 +1,14 @@
+# Faça um algoritmo que leia 4 números reais e calcule as medias aritmética e harmônica desses valores.
+
+var
+
+  a, b, c, d, media_aritmetica, media_harmonica : real
+
+inicio
+
+  leia(a, b, c, d) 
+  media_aritmetica <- (a + b + c + d)/4 
+  media_harmonica <- 4/((1/a) + (1/b) + (1/c) + (1/d)) 
+  escreva(media_aritmetica, media_harmonica) 
+
+fimalgoritmo

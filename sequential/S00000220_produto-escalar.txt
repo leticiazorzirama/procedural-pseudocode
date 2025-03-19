@@ -1,0 +1,14 @@
+# O produto escalar A.B de dois vetores A=[ax,ay,az...] e B=[bx,by,bz...] é dado pelo somatório ax*bx+ay*by+az*bz+...   
+# Faça um algoritmo que leia as coordenadas ax,ay,az,bx,by,bz de dois vetores no espaço tridimensional e calcule e escreva seu produto escalar. 
+
+var
+
+  ax, ay, az, bx, by, bz, produto_escalar : real
+
+inicio
+
+  leia(ax,ay,az,bx,by,bz) 
+  produto_escalar <- (ax*bx)+(ay*by)+(az*bz) 
+  escreva(produto_escalar) 
+
+fimalgoritmo

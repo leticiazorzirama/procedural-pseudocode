@@ -1,0 +1,22 @@
+# O coeficiente angular de um segmento de reta AB dado pelos pontos A(x1,y1) e B(x2,y2) representa a inclinação do segmento de reta, e pode ser calculado por (y2-y1)/(x2-x1). 
+# Faça um algoritmo que leia, para 3 pontos A, B e C, suas coordenadas x e y, e calcule e escreva os coeficientes angulares das retas AB, BC e AC.
+
+var
+         ax, ay, bx, by, cx, cy, coef_ang_AB, coef_ang_BC, coef_ang_AC : real
+
+inicio
+
+         escreval("Coordenadas x e y de A: ")
+         leia(ax, ay)
+         escreval("Coordenadas x e y de B: ")
+         leia (bx, by)
+         escreval ("Coordenadas x e y de C: ")
+         leia (cx, cy)
+         coef_ang_AB <- (by-ay)/(bx-ax)
+         coef_ang_BC <- (cy-by)/(cx-bx)
+         coef_ang_AC <- (cy-ay)/(cx-ax)
+         escreval("Coeficiente angular de AB: ", coef_ang_AB)
+         escreval("Coeficiente angular de BC: ", coef_ang_BC)
+         escreval("Coeficiente angular de AC: ", coef_ang_AC)
+
+fimalgoritmo

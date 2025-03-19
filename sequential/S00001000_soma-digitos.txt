@@ -1,0 +1,19 @@
+# Faça um algoritmo que le um valor entre 0 e 9999 e calcula a soma dos seus dígitos. 
+
+var
+
+  x, x1, temp1, x2, temp2, x3, temp3, x4, soma_digitos : inteiro
+
+inicio
+
+  leia(x) 
+  x1 <- x% 10 
+  temp1 <- x\10 
+  x2 <- temp1% 10 
+  temp2 <- temp1\10 
+  x3 <- temp2% 10 
+  x4 <- (temp2\10)% 10 
+  soma_digitos <- x1+x2+x3+x4 
+  escreva(soma_digitos) 
+
+fimalgoritmo

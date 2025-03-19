@@ -1,0 +1,16 @@
+# Faça um algoritmo que leia 3 valores a, b e c, coeficientes de uma equação de segundo grau, e calcule e escreva a soma das raízes da equação.
+
+var
+
+  a, b, c, delta, raiz1, raiz2, soma_raizes: real
+
+inicio
+
+  leia(a, b, c) 
+  delta <- (b*b) - 4*a*c 
+  raiz1 <- (-b + (raizq(delta)))/(2*a) 
+  raiz2 <- (-b - (raizq(delta)))/(2*a) 
+  soma_raizes <- raiz1 + raiz2 
+  escreva(soma_raizes) 
+
+fimalgoritmo

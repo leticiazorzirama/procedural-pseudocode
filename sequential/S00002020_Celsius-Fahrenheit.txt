@@ -1,0 +1,14 @@
+# Faça um algoritmo que leia uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit.
+
+var
+
+  celsius, fahrenheit : real
+
+inicio
+
+  leia(celsius) 
+  fahrenheit <- ((9/5) * celsius) + 32 
+  escreva(fahrenheit) 
+
+fimalgoritmo
+

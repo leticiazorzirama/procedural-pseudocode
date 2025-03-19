@@ -1,0 +1,14 @@
+# Fazer um algoritmo que leia o valor unitário de um produto que está sendo vendido e a quantidade que um consumidor está adquirindo desse produto. 
+# Escreva o valor que que o consumidor deve pagar para adquirir. 
+
+var
+
+  valor_unitario, quantidade, total : real
+
+inicio
+
+  leia(valor_unitario, quantidade) 
+  total <- valor_unitario * quantidade 
+  escreva(total) 
+
+fimalgoritmo

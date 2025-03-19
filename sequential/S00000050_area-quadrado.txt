@@ -1,0 +1,12 @@
+# Faça um algoritmo que leia um valor N, representando o lado de um quadrado, calcule e escreva a área do quadrado.
+
+var
+         n, area : real
+
+inicio
+         escreva("Digite o valor do lado do quadrado: ")
+         leia(n)
+         area <- n*n
+         escreva(area)
+
+fimalgoritmo

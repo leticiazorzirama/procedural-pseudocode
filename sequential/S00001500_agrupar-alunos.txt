@@ -1,0 +1,16 @@
+# Faça um algoritmo que leia a quantidade de alunos em uma sala de aula e a quantidade de alunos por
+# grupo, e calcule e escreva quantos grupos serão formados e o resto de alunos que não foram suficientes
+# para formar mais um grupo.
+
+var
+
+  quantidade_alunos, quantidade_aluno_grupo, grupos_formados, resto_alunos : inteiro
+
+inicio
+
+  leia(quantidade_alunos, quantidade_aluno_grupo) 
+  grupos_formados <- quantidade_alunos\quantidade_aluno_grupo 
+  resto_alunos <- quantidade_alunos% quantidade_aluno_grupo 
+  escreva(grupos_formados, resto_alunos) 
+
+fimalgoritmo

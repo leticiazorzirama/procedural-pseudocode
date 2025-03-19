@@ -1,0 +1,21 @@
+# Uma loja está está promovendo a venda de um produto que custa R$ 8,00, oferecendo 50% de desconto na segunda unidade.
+# Explicando melhor com exemplos, caso o cliente compre 1 unidade, ele paga integral, comrando 2 unidades ele paga 100% do valor na primeira e 50% do valor na segunda.
+# Caso ele compre 3 unidades, ele paga integral na primeria e na terceira, a segunda paga 50% do valor.
+# Comprando 10 unidades, ele paga integral na primeira, terceira, quinta, sétima e nona, e paga metade do valor na segunda, quarta, sexta, oitava e décima.
+# Comprando 5 unidades, ele paga integral na primeira, terceira, qunta, e 50% na segunda e quarta.
+# Fazer um algoritmo que leia a quantidade comprada e escreva o valor que deve ser pago pelos produtos.
+
+var
+
+  quantidade, paga_integral, paga_desconto, subtotal_integral, subtotal_desconto : inteiro
+
+inicio
+
+  leia(quantidade) 
+  paga_integral <- quantidade -(quantidade\2) 
+  subtotal_integral <- paga_integral * 8 
+  paga_desconto <- quantidade - paga_integral 
+  subtotal_desconto <- paga_desconto * 4 
+  escreva(subtotal_integral + subtotal_desconto) 
+
+fimalgoritmo

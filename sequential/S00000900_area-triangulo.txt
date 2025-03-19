@@ -1,0 +1,14 @@
+# Faça um algoritmo que lê 3 valores, lados de um triângulo, e calcule e escreva a área do triângulo formado. 
+
+var
+
+  a, b, c, S, area_triangulo : real
+
+inicio
+
+  leia(a, b, c) 
+  S <- (a+b+c)/2 
+  area_triangulo <- raizq(S*(S-a)*(S-b)*(S-c)) 
+  escreva(area_triangulo) 
+
+fimalgoritmo
