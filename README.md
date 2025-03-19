@@ -5,7 +5,7 @@ The goal is to enhance *programming logic* and *mathematical reasoning skills*.
 ## 📂 Repository Structure  
 The files are organized into the following algorithm categories:  
 
-<<<<<<< HEAD
+## 📂 Repository Structure  
 - **Sequential (S)**: step-by-step instructions.  
 - **Conditional (C)**: decisions based on conditions.  
 - **Iterative (I)**: loops and repetition structures.  
@@ -13,15 +13,6 @@ The files are organized into the following algorithm categories:
 - **Matrix (M)**: working with matrices.  
 - **Function (F)**: function creation and usage.  
 - **Recursion (R)**: implementing recursive calls.  
-=======
--**Sequential (S)**: step-by-step instructions.  
--**Conditional (C)**: decisions based on conditions.  
--**Iterative (I)**: loops and repetition structures.  
--**Array (V)**: working with arrays.  
--**Matrix (M)**: working with matrices.  
--**Function (F)**: function creation and usage.  
--**Recursion (R)**: implementing recursive calls.  
->>>>>>> 7360fcb921f077e6be891207df540ac68d210a97
 
 ## 🚀 How to Use  
 Each algorithm is saved in a .txt file, containing an identifier, the problem description, and the corresponding solution.  
