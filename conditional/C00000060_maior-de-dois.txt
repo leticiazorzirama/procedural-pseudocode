@@ -1,0 +1,18 @@
+#Faça um algoritmo que leia dois valores e, através de uma comparação, escreva o maior deles. Considere que os dois valores são diferentes.
+
+var
+
+  a, b : inteiro
+
+inicio
+
+  leia(a) 
+  leia(b) 
+
+  se a > b entao
+    escreva(a) 
+  senao
+    escreva(b) 
+  fimse
+
+fimalgoritmo

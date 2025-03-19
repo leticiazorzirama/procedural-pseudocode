@@ -1,0 +1,124 @@
+#Faça um algoritmo que leia 4(quatro) valores e escreva os 3 (tres) maiores em ordem decrescente. 
+#Considere que podem ocorrer valores iguais.
+
+var
+  
+  v1, v2, v3, v4, primeiro, segundo, terceiro : inteiro
+  
+inicio
+
+  leia(v1, v2, v3, v4) 
+  
+  se v4 >= v3 e v4 >= v2 e v4 >= v1 entao
+    primeiro <- v4 
+    se v3 >= v2 e v3 >= v1 entao
+      segundo <- v3 
+      se v2 >= v1 entao
+        terceiro <- v2  
+      senao
+        terceiro <- v1 
+      fimse
+    senao
+      se v2 >= v3 e v2 >= v1 entao
+        segundo <- v2 
+        se v3 >= v1 entao
+          terceiro <- v3  
+        senao
+          terceiro <- v1  
+        fimse
+      senao
+        segundo <- v1 
+        se v3 >= v2 entao
+          terceiro <- v3  
+        senao
+          terceiro <- v2  
+        fimse
+      fimse
+    fimse
+  senao
+    se v3 >= v4 e v3 >= v2 e v3 >= v1 entao
+      primeiro <- v3 
+      se v4 >= v2 e v4 >= v1 entao
+        segundo <- v4 
+        se v2 >= v1 entao
+          terceiro <- v2  
+        senao
+          terceiro <- v1 
+        fimse
+      senao
+        se v2 >= v4 e v2 >= v1 entao
+          segundo <- v2 
+          se v4 >= v1 entao
+            terceiro <- v4  
+          senao
+            terceiro <- v1  
+          fimse
+        senao
+          segundo <- v1 
+          se v4 >= v2 entao
+            terceiro <- v4  
+          senao
+            terceiro <- v2  
+          fimse
+        fimse
+      fimse
+    senao
+      se v2 >= v4 e v2 >= v3 e v2 >= v1 entao
+        primeiro <- v2 
+        se v4 >= v3 e v4 >= v1 entao
+          segundo <- v4 
+          se v3 >= v1 entao
+            terceiro <- v3  
+          senao
+            terceiro <- v1  
+          fimse
+        senao
+          se v3 >= v4 e v3 >= v1 entao
+            segundo <- v3 
+            se v4 >= v1 entao
+              terceiro <- v4  
+            senao
+              terceiro <- v1  
+            fimse
+          senao
+            segundo <- v1 
+            se v4 >= v3 entao
+              terceiro <- v4  
+            senao
+              terceiro <- v3 
+            fimse
+          fimse
+        fimse
+      senao
+        primeiro <- v1 
+        se v4 >= v3 e v4 >= v2 entao
+          segundo <- v4 
+          se v3 >= v2 entao
+            terceiro <- v3 
+          senao
+            terceiro <- v2 
+          fimse
+        senao
+          se v3 >= v4 e v3 >= v2 entao
+            segundo <- v3 
+            se v4 >= v2 entao
+              terceiro <- v4 
+            senao
+              terceiro <- v2 
+            fimse
+          senao
+            segundo <- v2 
+            se v4 >= v3 entao
+              terceiro <- v4 
+            senao
+              terceiro <- v3 
+            fimse
+          fimse
+        fimse
+      fimse
+    fimse
+  fimse
+  
+  escreva(primeiro, segundo, terceiro) 
+  
+fimalgoritmo

@@ -1,0 +1,32 @@
+#Faça um algoritmo que leia 4 valores, Hi, Mi, Hf, Mf, representando respectivamente a hora e minuto inicial e final de um evento, 
+#e calcule a duração do mesmo em horas e minutos. Considere que o evento pode iniciar em um dia e terminar no dia seguinte. 
+
+var
+
+  Hi, Mi, Hf, Mf, minutos_i, minutos_f, duracao_minutos, Dh, Dm : inteiro
+  
+inicio
+
+  leia(Hi, Mi, Hf, Mf) 
+  minutos_i <- (Hi*60) + Mi 
+  minutos_f <- (Hf*60) + Mf 
+  
+  // se a hora final for menor que a hora inicial, assume-se que o evento iniciou em um dia e terminou no dia seguinte
+  // e a duração será a soma entre:
+  // a diferença entre o horário de início e o final do respectivo dia e
+  // a diferença entre o início do dia seguinte e o o horário de término do evento
+  se minutos_f >= minutos_i entao
+     duracao_minutos <- minutos_f - minutos_i
+  senao
+    minutos_i <- 1440-minutos_i 
+    duracao_minutos <- minutos_i + minutos_f    
+    // se a hora inicial for menor ou igual que a hora final, assume-se que o evento iniciou e terminou no mesmo dia
+    // e a duração será a diferença entre o horário de término e o horário de início     
+  fimse
+
+  Dh <- duracao_minutos\60 
+  Dm <- duracao_minutos% 60 
+
+  escreva(Dh, Dm)
+
+fimalgoritmo 

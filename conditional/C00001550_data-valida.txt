@@ -1,0 +1,53 @@
+#Faça um algoritmo que leia três valores Dia, Mês e Ano, e verifique se formam uma data válida. 
+#O algoritmo deve escrever 1 se a data for válida, 0 em caso contrário. 
+#Considere que ano bissexto é aquele divisível por 4 e que abril, junho, setembro e novembro tem 30 dias, fevereiro tem 28 (29 em ano bissexto) 
+#e todos os outros meses tem 31 dias.
+
+var
+  
+  d, m, a : inteiro
+  
+inicio
+  
+  leia (d, m, a) 
+  // Se o dia ou o mês forem maiores que 31 ou 12, respectivamente
+  se (d > 31) ou (m > 12) entao
+    escreva("0") 
+  senao
+    // Meses com 30 dias
+    se (m = 4) ou (m = 6) ou (m = 9) ou (m = 11) entao
+      se (d <= 30) entao
+        escreva("1") 
+      senao
+        escreva("0") 
+      fimse
+    senao
+      // Meses com 31 dias
+      se (m <> 2) entao
+        se (d <= 31) entao
+          escreva("1") 
+        senao
+          escreva("0") 
+        fimse
+      senao
+        // Fevereiro
+        // Ano bissexto
+        se (a % 4 = 0) entao
+          se (d <= 29) entao
+            escreva("1") 
+          senao
+            escreva("0") 
+          fimse
+          // Ano não bissexto
+        senao
+          se (d <= 28) entao
+            escreva("1") 
+          senao
+            escreva("0") 
+          fimse
+        fimse
+      fimse
+    fimse
+  fimse
+  
+fimalgoritmo

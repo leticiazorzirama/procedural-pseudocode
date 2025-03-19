@@ -1,0 +1,41 @@
+#Fazer um algoritmo que a partir de quatro medidas de temperatura (números com casas decimais), escreva a temperatura média (aritmética simples), 
+#considerando as duas temperaturas intermediárias, ou seja, desconsiderar a maior e a menor das quatro temperaturas lidas.
+
+var
+
+  t1, t2, t3, t4, menor, maior, media : real
+
+inicio
+
+  leia(t1, t2, t3, t4) 
+  menor <- t1 
+  maior <- t4 
+
+  se t2 < menor entao
+    menor <- t2 
+  fimse
+
+  se t2 > maior entao
+    maior <- t2 
+  fimse
+
+  se t3 < menor entao
+    menor <- t3 
+  fimse
+
+  se t3 > maior entao
+    maior <- t3 
+  fimse
+
+  se t4 < menor entao
+    menor <- t4 
+  fimse
+
+  se t4 > maior entao
+    maior <- t4 
+  fimse
+
+  media <- (t1 + t2 + t3 + t4 -(menor+maior))/2 
+  escreva(media) 
+
+fimalgoritmo

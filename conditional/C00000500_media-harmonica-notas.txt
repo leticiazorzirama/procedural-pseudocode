@@ -1,0 +1,18 @@
+#Faça um algoritmo que leia 3 notas de um aluno e escreva sua média harmônica.
+
+var
+
+  n1, n2, n3, media_harmonica : real
+
+inicio
+
+  leia(n1, n2, n3)
+ 
+  se n1 = 0 ou n2 = 0 ou n3 = 0 entao
+    escreva("0") 
+  senao
+    media_harmonica <- 3/((1/n1)+(1/n2)+(1/n3)) 
+    escreva(media_harmonica) 
+  fimse
+
+fimalgoritmo

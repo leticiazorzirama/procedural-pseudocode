@@ -1,0 +1,15 @@
+#Faça um algoritmo que leia para um trabalhador o valor que ganha por hora, a hora de entrada e a hora de saída (valores inteiros, sem minutos) 
+#e calcule quanto ele ganhou pelo turno. Considere que ele entra e sai no mesmo dia.
+
+var
+  
+  valor_hora, entrada, saida, turno, pagamento : inteiro
+  
+inicio
+  
+  leia(valor_hora, entrada, saida) 
+  turno <- saida - entrada 
+  pagamento <- turno * valor_hora 
+  escreva(pagamento) 
+  
+fimalgoritmo

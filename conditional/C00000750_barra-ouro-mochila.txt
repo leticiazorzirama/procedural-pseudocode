@@ -1,0 +1,49 @@
+#Faça um algoritmo que leia, para duas barras de ouro, o seu peso e seu valor.
+#O algoritmo deve ler também o limite de peso de uma mochila, e verificar e
+#escrever que barra(s) devem ir na mochila de modo a maximizar o valor dentro
+#dela, sem exceder seu limite de peso. O algoritmo deve escrever:
+#0 - Se nenhuma das barras puder ser colocada na mochila sem exceder o limite de peso;
+#1 - Se apenas a barra 1 puder ir na mochila;
+#2 - Se apenas a barra 2 puder ir na mochila;
+#3 - Se ambas as barras puderem ir na mochila simultaneamente.
+
+var
+  
+  barra1, valor1, barra2, valor2, mochila : inteiro
+  
+inicio
+
+  leia(barra1, valor1, barra2, valor2, mochila) 
+  
+  // nenhuma barra cabe na mochila
+  se mochila < barra1 e mochila < barra2 entao
+    escreva("0") 
+  fimse
+  
+  // ambas as barras cabem na mochila
+  se mochila >= (barra1 + barra2) entao
+    escreva("3") 
+  senao
+    
+    // se qualquer uma cabe na mochila, compara-se qual tem o maior valor para ser a escolhida
+    se mochila >= barra1 e mochila >= barra2 entao
+      se valor1 < valor2 entao
+        escreva("2") 
+      senao
+        se valor2 < valor1 entao
+          escreva("1") 
+        fimse
+      fimse
+    fimse
+    
+    // se ou uma ou outra cabem na mochila
+    se mochila >= barra1 e mochila < barra2 entao
+      escreva("1") 
+    senao
+      se mochila >= barra2 e mochila < barra1 entao
+        escreva("2") 
+      fimse
+    fimse
+  fimse
+  
+fimalgoritmo

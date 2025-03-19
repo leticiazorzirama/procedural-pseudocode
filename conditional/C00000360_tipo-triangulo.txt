@@ -1,0 +1,39 @@
+#Faça um algoritmo que leia 3 valores a, b e c, lados de um triângulo, e verifique o tipo de triângulo formado escrevendo: 
+#0 - se o triângulo é retângulo (A^2=B^2+C^2); 
+#1 - se o triângulo é obtusângulo (A^2 > B^2 + C^2);
+#2 - acutângulo (A^2 < B^2 + C^2). 
+#Considere que, para aplicar as relações mostradas, algoritmo deve garantir que o maior dos 3 lados estará em A.
+
+var
+
+  a, b, c, aux : inteiro
+
+inicio
+
+  leia(a,b,c) 
+
+  se b > a entao
+    aux <- b 
+    b <- a 
+    a <- aux 
+  fimse
+
+  se c > a entao
+    aux <- c 
+    c <- a 
+    a <- aux 
+  fimse
+
+  se a^2 = b^2 + c^2 entao
+    escreva("0") 
+  fimse
+
+  se a^2 > b^2 + c^2 entao
+    escreva("1") 
+  fimse
+
+  se a^2 < b^2 + c^2 entao
+    escreva("2") 
+  fimse
+
+fimalgoritmo

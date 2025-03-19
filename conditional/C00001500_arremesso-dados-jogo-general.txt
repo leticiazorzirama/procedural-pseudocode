@@ -1,0 +1,46 @@
+#Faça um algoritmo que leia 5 valores entre 1 e 6, já ordenados, correspondente ao arremesso de 5 dados no jogo do general, e escreva:
+#1 - Se os 5 valores são iguais;
+#2 - Se há 4 valores iguais e um diferente;
+#3 - Se os 5 valores formam uma sequência (1,2,3,4,5 ou 2,3,4,5,6);
+#4 - Se os valores formam um full-hand (3 valores iguais entre si, e os outros dois valores também iguais entre si);
+#5 - Nenhuma das combinações acima.
+
+var
+
+  dado1, dado2, dado3, dado4, dado5: inteiro
+
+inicio
+  
+  leia(dado1, dado2, dado3, dado4, dado5)
+  
+  // Caso 1: Todos os valores são iguais
+  se (dado1 = dado2 e dado2 = dado3 e dado3 = dado4 e dado4 = dado5) entao
+    escreva("1")
+  
+  // Caso 2: Quatro valores iguais e um diferente
+  senao
+    se ((dado1 = dado2 e dado2 = dado3 e dado3 = dado4) ou
+        (dado2 = dado3 e dado3 = dado4 e dado4 = dado5)) entao
+      escreva("2")
+
+    // Caso 3: Sequência de 1 a 5 ou 2 a 6
+    senao
+      se ((dado1 = 1 e dado2 = 2 e dado3 = 3 e dado4 = 4 e dado5 = 5) ou
+          (dado1 = 2 e dado2 = 3 e dado3 = 4 e dado4 = 5 e dado5 = 6)) entao
+        escreva("3")
+
+      // Caso 4: Full-hand (três iguais e dois iguais)
+      senao
+        se ((dado1 = dado2 e dado2 = dado3 e dado4 = dado5) ou
+            (dado1 = dado2 e dado3 = dado4 e dado4 = dado5)) entao
+          escreva("4")
+
+        // Caso 5: Nenhuma das combinações acima
+        senao
+          escreva("5")
+        fimse
+      fimse
+    fimse
+  fimse
+
+fimalgoritmo

@@ -1,0 +1,28 @@
+#Escreva um algoritmo que leia os valores das quatro provas de um aluno e escreva a média aritmética considerando apenas as três melhores notas. 
+#Por exemplo, se o valores lidos foram 9, 9.5, 7, e 8, a média será (9 + 9.5 + 8)/3 (a prova de nota 7 é descartada). 
+
+var
+
+  n1, n2, n3, n4, menor, media : real
+
+inicio
+
+  leia(n1, n2, n3, n4) 
+  menor <- n1 
+
+  se n2 < menor entao
+    menor <- n2 
+  fimse
+
+  se n3 < menor entao
+    menor <- n3 
+  fimse
+
+  se n4 < menor entao
+    menor <- n4 
+  fimse
+
+  media <- (n1 + n2 + n3 + n4 - menor)/3 
+  escreva(media) 
+
+fimalgoritmo

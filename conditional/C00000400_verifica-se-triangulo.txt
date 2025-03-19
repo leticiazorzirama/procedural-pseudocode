@@ -1,0 +1,21 @@
+#Faça um algoritmo que leia 3 valores l1,l2 e l3 e verifique se formam um triângulo. 
+#Se formarem, calcule e escreva a área do triângulo formado. 
+#Se não formarem, escreva -1.
+
+var
+
+  a, b, c, semip, area : real
+
+inicio
+
+  leia(a, b, c) 
+
+  se ((abs(b - c)) < a ) e (a < b + c) e ((abs(a - c)) < b) e (b < a + c) e ((abs(a - b)) < c) e (c < a + b) entao
+    semip <- (a+b+c)/2 
+    area <- raizq(semip*(semip-a)*(semip-b)*(semip-c)) 
+    escreva(area) 
+  senao
+    escreva("-1") 
+  fimse
+
+fimalgoritmo 

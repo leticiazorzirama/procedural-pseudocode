@@ -1,0 +1,66 @@
+#Escreva um algoritmo que leia uma data, composta por dia, mês e ano, e escreva a data correspondente
+#ao dia seguinte. Considere, para simplificar o problema, que ano bissexto é aquele divisível por 4, e
+#que fevereiro tem 28 dias (29 em ano bissexto), setembro, abril, junho e novembro têm 30 dias e todos
+#os outros meses tem 31 dias.
+
+var
+  
+  d, m, a : inteiro
+  
+inicio
+  
+  leia(d, m, a) 
+  
+  // selecionar os meses que têm 30 dias e se o dia é ou não o dia 30
+  se (m = 4) ou (m = 6) ou (m = 9) ou (m = 11) entao
+    se (d = 30) entao
+      m <- m + 1 
+      d <- 1 
+    senao
+      d <- d + 1 
+    fimse
+    // selecionar os meses que tem 31 dias e se o dia é ou não é o dia 31
+  senao
+    se (m = 1) ou (m = 3) ou (m = 5) ou (m = 7) ou (m = 8) ou (m = 10) entao
+      se (d = 31) entao
+        m <- m + 1 
+        d <- 1 
+      senao
+        d <- d + 1 
+      fimse
+    fimse
+  fimse
+  
+  // se o mês for fevereiro
+  se (m = 2) entao
+    se (a % 4 = 0) entao
+      se (d = 29) entao
+        m <- m + 1 
+        d <- 1 
+      senao
+        d <- d + 1 
+      fimse
+    senao
+      se (d = 28) entao
+        m <- m + 1 
+        d <- 1 
+      senao
+        d <- d + 1 
+      fimse
+    fimse
+  fimse
+  
+  // se o mês for fevereiro e o dia for o último dia do ano
+  se (m = 12) entao
+    se (d = 31) entao
+      a <- a + 1 
+      m <- 1 
+      d <- 1 
+    senao
+      d <- d + 1 
+    fimse
+  fimse
+  
+  escreva(d, m, a) 
+  
+fimalgoritmo 

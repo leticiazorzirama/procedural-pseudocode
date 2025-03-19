@@ -1,0 +1,17 @@
+#Faça um algoritmo que leia um valor e escreva: 0, se o valor é par; 1, se o valor é ímpar.
+
+var
+
+  x : inteiro
+
+inicio
+
+  leia(x) 
+
+  se x % 2 = 0 entao
+    escreva("0") 
+  senao
+    escreva("1") 
+  fimse
+
+fimalgoritmo

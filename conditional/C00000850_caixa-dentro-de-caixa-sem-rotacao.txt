@@ -1,0 +1,23 @@
+#Faça um algoritmo que leia as três dimensões (largura, comprimento e altura) de duas caixas, e verifique se a primeira caixa pode ser colocada dentro da segunda, 
+#escrevendo 1 se é possível colocá-la, e 0 se não é possível. Considere que as caixas não podem ser rotacionadas em nenhuma direção.
+
+var
+  
+  l1, c1, a1, l2, c2, a2 : real
+  
+inicio
+
+  //ler largura, comprimento e altura de 2 caixas 
+  //comparar as caixas nas suas larguras, comprimentos e alturas
+  //para ver se a caixa menor cabe dentro da maior
+  //as caixas não podem ser rotacionadas 
+  //as medidas da caixa menor devem ser menores, não podendo ser iguais ou maiores que a caixa maior
+  leia(l1, c1, a1, l2, c2, a2) 
+  
+  se ((l1 < l2) e (c1 < c2) e (a1 < a2)) ou ((l2 < l1) e (c2 < c1) e (a2 < a1)) entao
+    escreva("1") 
+  senao
+    escreva("0") 
+  fimse
+  
+fimalgoritmo

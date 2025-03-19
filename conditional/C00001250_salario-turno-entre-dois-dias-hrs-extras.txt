@@ -1,0 +1,37 @@
+#Faça um algoritmo que leia para um trabalhador o valor que ganha por hora, a hora de entrada e a hora de saída (valores inteiros, sem minutos) 
+#e calcule quanto ele ganhou pelo turno. Considere que ele pode entrar em um dia e sair no dia seguinte, e que se ele permanecer mais do que 8 horas, 
+#as duas horas seguintes (a nona e a décima) valem 20% a mais, e as horas após a décima hora valem 50% a mais (horas extras).
+
+var
+  
+  he, hs, turno, v8, v10, vh : inteiro
+  pgmto : real
+  
+inicio
+  
+  leia(vh, he, hs) 
+  
+  v8 <- 0
+  v10 <- 0
+
+  se (he > hs) entao
+    turno <- (24-he) + hs // se entrou num dia e saiu no seguinte
+  senao      
+    turno <- hs-he // se entrou e saiu no mesmo dia
+  fimse
+  
+  se (turno > 8) entao
+    se (turno > 10) entao
+      v8 <- 2 
+      v10 <- turno - 10 
+      turno <- turno - (v8 + v10) 
+    senao
+      v8 <- turno - 8 
+      turno <- turno - v8 
+    fimse
+  fimse
+
+  pgmto <- ((1.2 * v8) + turno + (1.5 * v10)) * vh
+  escreva(pgmto) 
+  
+fimalgoritmo

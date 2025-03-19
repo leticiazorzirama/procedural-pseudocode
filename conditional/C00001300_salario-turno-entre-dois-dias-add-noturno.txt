@@ -1,0 +1,57 @@
+#Faça um algoritmo que leia para um trabalhador o valor que ganha por hora, a hora de entrada e a hora
+#de saída (valores inteiros, sem minutos) e calcule quanto ele ganhou pelo turno. Considere que ele 
+#pode entrar em um dia e sair no outro, mas que o total de horas trabalhadas não excede 23 horas.
+#Considere que as horas das 20:00 às 24:00 valem 20% a mais (adicional noturno).
+
+var
+  
+  vh, he, hs, tn, t20 : inteiro
+  pagamento : real
+  
+inicio
+  
+  leia(vh, he, hs) 
+  
+  //entrou e saiu no mesmo dia
+  se (he < hs) entao
+    //entrou antes das 20
+    se (he < 20) entao
+      //saiu depois das 20
+      se (hs > 20) entao
+        tn <- 20-he 
+        t20 <- hs-20 
+      senao
+        //saiu antes das 20
+        tn <- hs-he 
+        t20 <- 0 
+      fimse
+      //entrou depois das 20
+    senao
+      tn <- 0 
+      t20 <- hs-he 
+    fimse
+    //entrou num dia e saiu no seguinte
+  senao
+    //entrou antes das 20, obrigatoriamente vai receber o adicional noturno cheio (24-20 = 4horas)
+    se (he < 20) entao
+      t20 <- 4 
+      tn <- (20-he) + hs 
+    senao
+      //entrou depois das 20, vai receber adicional noturno do dia 1 a depender da hora de entrada
+      //o adicional noturno do dia 2 vai depender da hora de saída
+      //saiu no dia 2 antes das 20
+      se (hs < 20) entao
+        t20 <- 24-he 
+        tn <- hs 
+      senao
+        //saiu no dia 2 depois das 20
+        t20 <- (24-he) + (hs-20) 
+        tn <- 20 
+      fimse
+    fimse
+  fimse
+  
+  pagamento <- ((1.2 * t20) + tn) * vh 
+  escreva(pagamento) 
+  
+fimalgoritmo

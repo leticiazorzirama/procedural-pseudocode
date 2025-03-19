@@ -1,0 +1,31 @@
+#Faça um algoritmo que leia a data de nascimento de uma pessoa e a data atual (cada data com dia, mês e ano). 
+#O algoritmo deve escrever 1 se a pessoa é maior de idade, e 0 se ela é menor de idade (maioridade: 18 anos).
+
+var
+  
+  dn, mn, an, da, ma, aa : inteiro
+  
+inicio
+
+  //lei a data de nascimento (dia, mes, ano) e a data atual
+  leia(dn, mn, an, da, ma, aa) 
+  
+  //se apenas pela diferença dos anos, a pessoa ainda for menor que 18
+  se (aa - an <= 17) entao
+    escreva("0") 
+  senao
+    //se apenas pela diferença dos anos, a pessoa já for maior que 18
+    se (aa - an >= 19) entao
+      escreva("1") 
+    senao
+      //se a pessoa está no ano em que vai completar 18
+      //se a pessoa já fez aniversário no ano atual, a data e o mês de nascimento são menores que os do ano atual
+      se (dn <= da) e (mn <= ma) entao
+        escreva("1") 
+      senao
+        escreva("0") 
+      fimse
+    fimse
+  fimse
+  
+fimalgoritmo

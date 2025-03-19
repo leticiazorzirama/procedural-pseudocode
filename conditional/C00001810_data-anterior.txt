@@ -1,0 +1,76 @@
+#Fazer um algoritmo que leia uma data em três variáveis inteiras (dia, mes e ano) e escreva a data correspondente ao dia anterior também de forma separada: 
+#dia, mês e ano. Para facilitar, considerar que os anos bissextos são aqueles divisíveis por 4.
+#Assim o mês 2 (fevereiro) possui 28 dias, exceto nos anos bissextos, nos quais possui 29 dias.
+#Abril (4), junho(6), setembro(9) e novembro(11) possuem 30 dias e os semais 31 dias. 
+
+var
+  
+  d, m, a : inteiro
+  
+inicio
+  
+  leia(d, m, a) 
+  
+  // selecionar os meses que têm 30 dias e se o dia é ou não o primeiro do mês
+  se (m = 2) ou (m = 4) ou (m = 6) ou (m = 9) ou (m = 11) entao
+    se (d = 1) entao
+      m <- m - 1 
+      d <- 31 
+    senao
+      d <- d - 1 
+    fimse
+  senao
+    // selecionar os meses que tem 31 dias e que o dia anterior é de um mês de 30 dias
+    se (m = 5) ou (m = 7) ou (m = 10) ou (m = 12) entao
+      se (d = 1) entao
+        m <- m - 1 
+        d <- 30 
+      senao
+        d <- d - 1 
+      fimse
+    senao
+      // agosto é o único mês que o anterior também é 31
+      se (m = 8) entao
+        se (d = 1) entao
+          m <- m - 1 
+          d <- 31 
+        senao
+          d <- d - 1 
+        fimse
+      senao
+        // caso do mês de fevereiro
+        se (m = 3) entao
+          se (a % 4 = 0) entao
+            se (d = 1) entao
+              m <- m - 1 
+              d <- 29 
+            senao
+              d <- d - 1 
+            fimse
+          senao
+            se (d = 1) entao
+              m <- m - 1 
+              d <- 28 
+            senao
+              d <- d - 1 
+            fimse
+          fimse
+        senao
+          // caso do mês ser janeiro 
+          se (m = 1) entao
+            se (d = 1) entao
+              a <- a - 1 
+              m <- 12 
+              d <- 31 
+            senao
+              d <- d - 1
+            fimse
+          fimse
+        fimse
+      fimse
+    fimse
+  fimse
+  
+  escreva(d, m, a) 
+  
+fimalgoritmo 

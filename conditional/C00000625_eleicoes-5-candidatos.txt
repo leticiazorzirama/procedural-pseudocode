@@ -1,0 +1,179 @@
+#Faça um algoritmo que leia os códigos e as votações dos 5 candidatos da eleição para presidente em 1o turno. 
+#O algoritmo deve escrever, para cada candidato, seu código e seu percentual de votos. 
+#Se a eleição foi decidida no 1o turno, i.e., um candidato obteve 50% dos votos válidos + 1, o algoritmo deve escrever o código e o percentual de votos do eleito. 
+#Em caso contrário, o algoritmo deve escrever os códigos e os percentuais de votos dos dois candidatos que disputarão o segundo turno (escrevendo em primeiro lugar o mais votado, e depois o segundo mais votado).
+
+var
+  
+  c1, c2, c3, c4, c5, v1, v2, v3, v4, v5, votos_total, primeiro_c, segundo_c : inteiro
+  p1, p2, p3, p4, p5, primeiro_p, segundo_p : real
+  
+inicio
+  
+  //entradas dos códigos candidatos = c1, c2, c3... e das votações candidatos = v1, v2, v3...
+  leia(c1, v1, c2, v2, c3, v3, c4, v4, c5, v5) 
+  
+  //total de votos
+  votos_total <- v1 + v2 + v3 + v4 + v5 
+  
+  //percentuais de votos para cada candidato = p1, p2, p3...
+  p1 <- (v1/votos_total)*100 
+  p2 <- (v2/votos_total)*100 
+  p3 <- (v3/votos_total)*100 
+  p4 <- (v4/votos_total)*100 
+  p5 <- (v5/votos_total)*100 
+  
+  //se a eleição foi decidida em 1o turno
+  // imprimir o código e o percentual de votos do eleito
+  se p1 > 50 entao
+    escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, c1, p1) 
+  senao
+    se p2 > 50 entao
+      escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, c2, p2) 
+    senao
+      se p3 > 50 entao
+        escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, c3, p3) 
+      senao
+        se p4 > 50 entao
+          escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, p4, c4) 
+        senao
+          se p5 > 50 entao
+            escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, p5, c5) 
+            
+            // se a eleição não for decidida em 1o turno
+            // os códigos e os percentuais de votos dos dois candidatos que disputarão o segundo turno 
+            // encontrando 1o e 2o mais votados
+          senao
+            se p1 > p2 e p1 > p3 e p1 > p4 e p1 > 5 entao
+              primeiro_p <- p1 
+              primeiro_c <- c1 
+              se p2 > p3 e p2 > p4 e p2 > p5 entao
+                segundo_p <- p2 
+                segundo_c <- c2 
+                escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p) 
+              senao
+                se p3 > p2 e p3 > p4 e p3 > p5 entao
+                  segundo_p <- p3 
+                  segundo_c <- c3 
+                  escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                senao
+                  se p4 > p2 e p4 > p3 e p4 > p5 entao
+                    segundo_p <- p4 
+                    segundo_c <- c4 
+                    escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                  senao
+                    segundo_p <- p5 
+                    segundo_c <- c5 
+                    escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                  fimse
+                fimse
+              fimse
+            senao
+              se p2 > p1 e p2 > p3 e p2 > p4 e p2 > p5 entao
+                primeiro_p <- p2 
+                primeiro_c <- c2 
+                se p1 > p3 e p1 > p4 e p1 > p5 entao
+                  segundo_p <- p1 
+                  segundo_c <- c1 
+                  escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                senao
+                  se p3 > p1 e p3 > p4 e p3 > p5 entao
+                    segundo_p <- p3 
+                    segundo_c <- c3 
+                    escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                  senao
+                    se p4 > p2 e p4 > p3 e p4 > p5 entao
+                      segundo_p <- p4 
+                      segundo_c <- c4 
+                      escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                    senao
+                      segundo_p <- p5 
+                      segundo_c <- c5 
+                      escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p) 
+                    fimse
+                  fimse
+                fimse
+              senao
+                se p3 > p1 e p3 > p2 e p3 > p4 e p3 > p5 entao
+                  primeiro_p <- p3 
+                  primeiro_c <- c3 
+                  se p1 > p3 e p1 > p4 e p1 > p5 entao
+                    segundo_p <- p1 
+                    segundo_c <- c1 
+                    escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                  senao
+                    se p2 > p1 e p2 > p4 e p2 > p5 entao
+                      segundo_p <- p2 
+                      segundo_c <- c2 
+                      escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                    senao
+                      se p4 > p2 e p4 > p3 e p4 > p5 entao
+                        segundo_p <- p4 
+                        segundo_c <- c4 
+                        escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                      senao
+                        segundo_p <- p5 
+                        segundo_c <- c5 
+                        escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                      fimse
+                    fimse
+                  fimse
+                senao
+                  se p4 > p1 e p4 > p2 e p4 > p3 e p4 > p5 entao
+                    primeiro_p <- p4 
+                    primeiro_c <- c4 
+                    se p1 > p3 e p1 > p4 e p1 > p5 entao
+                      segundo_p <- p1 
+                      segundo_c <- c1 
+                      escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                    senao
+                      se p2 > p1 e p2 > p4 e p2 > p5 entao
+                        segundo_p <- p2 
+                        segundo_c <- c2 
+                        escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                      senao
+                        se p3 > p1 e p3 > p2 e p3 > p5 entao
+                          segundo_p <- p3 
+                          segundo_c <- c3 
+                          escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                        senao
+                          segundo_p <- p5 
+                          segundo_c <- c5 
+                          escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                        fimse
+                      fimse
+                    fimse
+                  senao
+                    primeiro_p <- p5 
+                    se p1 > p2 e p1 > p3 e p1 > p4 entao
+                      segundo_p <- p1 
+                      segundo_c <- c1 
+                      escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                    senao
+                      se p2 > p1 e p2 > p3 e p2 > p4 entao
+                        segundo_p <- p2 
+                        segundo_c <- c2 
+                        escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                      senao
+                        se p3 > p1 e p3 > p2 e p3 > p4 entao
+                          segundo_p <- p3 
+                          segundo_c <- c3 
+                          escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                        senao
+                          segundo_p <- p4 
+                          segundo_c <- c4 
+                          escreva (c1, p1, c2, p2, c3, p3, c4, p4, c5, p5, primeiro_c, primeiro_p, segundo_c, segundo_p)
+                        fimse
+                      fimse
+                    fimse
+                  fimse
+                fimse
+              fimse
+            fimse
+          fimse
+        fimse
+      fimse
+    fimse
+  fimse
+
+fimalgoritmo

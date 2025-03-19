@@ -1,0 +1,42 @@
+#Faça um algoritmo que leia a data de nascimento de uma pessoa e a data atual, 
+#cada uma com dia, mês e ano, e escreva quantos anos completos a pessoa tem.
+
+var
+  
+  dn, mn, an, da, ma, aa, anos : inteiro
+  
+inicio
+  
+  leia(dn, mn, an, da, ma, aa) 
+  
+  // se o ano de nascimento e ano atual forem diferentes
+  se (an <> aa) entao
+    anos <- aa - an
+    //se os meses forem diferentes, verificar se a pessoa já fez aniversário neste ano ou ainda vai fazer
+    se (mn <> ma) entao
+      // se o mês de nascimento for menor que o mês atual, a pessoa já fez aniversário e é só substrair os anos
+      se (mn < ma) entao
+        anos <- aa-an 
+      senao
+        // se a pessoa ainda não fez aniversário, subtrai-se os anos - 1
+        anos <- (aa-an)-1 
+      fimse
+    senao
+      // se os meses forem iguais, compara-se os dias, verificando se a pessoa já fez aniversário neste ano ou ainda vai fazer
+      se (dn <> da) entao
+        // se o dn for menor que o da, então a pessoa já fez aniversário
+        se (dn < da) entao
+          anos <- aa-an 
+        senao
+          anos <- (aa-an)-1 
+        fimse
+      fimse
+    fimse
+  // se os anos forem iguais, a pessoa ainda tem 0 anos 
+  senao
+         anos <- 0
+  fimse
+  
+  escreva(anos) 
+  
+fimalgoritmo

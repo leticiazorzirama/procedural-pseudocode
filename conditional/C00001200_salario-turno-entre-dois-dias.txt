@@ -1,0 +1,21 @@
+#Faça um algoritmo que leia para um trabalhador o valor que ganha por hora, a hora de entrada e a hora de saída (valores inteiros, sem minutos) 
+#e calcule quanto ele ganhou pelo turno. Considere que ele pode entrar em um dia e sair no outro, mas que o total de horas trabalhadas não excede 23 horas.
+
+var
+  
+  vh, he, hs, turno, pagamento : inteiro
+  
+inicio
+  
+  leia(vh, he, hs) 
+  
+  se (he > hs) entao
+    turno <- (24-he) + hs 
+  senao
+    turno <- hs-he 
+  fimse
+  
+  pagamento <- turno * vh 
+  escreva(pagamento) 
+  
+fimalgoritmo

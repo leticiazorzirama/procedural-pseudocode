@@ -1,0 +1,75 @@
+#Faça um algoritmo que leia 3 notas de um aluno e calcule sua média harmônica (MH). 
+#Caso alguma das notas seja 0 (zero), a MH inicialmente deve receber 0 (mas com direito a recuperação). 
+#Se o aluno obteve uma MH abaixo de 6.0 e AINDA PUDER OBTER média igual ou superior a 6.0,  o algoritmo deve ler uma quarta nota (da prova de recuperação) 
+#e substituir a menor das três notas pela nota da recuperação, recalculando MH. 
+#O algoritmo deve escrever a MH final e o conceito obtido (0, se MH < 6.0; 1 se 6.0 <= MH <7.0; 2 se 7.0 <= MH < 8.0; 3 se 8.0 <= MH < 9.0; 4 se MH>=9.0).
+
+var
+
+  n1, n2, n3, aux, mh, mh_teste, nr, conceito: real
+  
+inicio
+
+  //armazenar a menor das 3 notas na variável n1
+  leia(n1, n2, n3) 
+
+  se n2 < n1 entao
+    aux <- n1
+    n1 <- n2
+    n2 <- aux
+  fimse
+
+  se n3 < n1 entao
+    aux <- n1
+    n1 <- n3
+    n3 <- aux
+  fimse  
+  
+  //confere se alguma é zero
+  se n1 = 0 ou n2 = 0 ou n3 = 0 entao
+    mh <- 0 
+  senao
+    mh <- 3/((1/n1)+(1/n2)+(1/n3)) 
+  fimse
+  
+      se mh < 6 entao
+	   n1 <- 10
+        se n2 = 0 ou n3 = 0 entao
+		mh_teste <- 0
+	   senao
+          mh_teste <- 3/((1/n1)+(1/n2)+(1/n3)) 
+	   fimse
+     
+        se mh_teste >= 6 entao
+          leia (nr) 
+          n1 <- nr 
+          se n1 = 0 ou n2 = 0 ou n3 = 0 entao
+            mh <- 0 
+          senao
+            mh <- 3/((1/n1)+(1/n2)+(1/n3)) 
+          fimse
+        fimse
+      fimse
+  
+  //escrever a mh final e o conceito
+  se (mh < 6) entao
+    conceito <- 0 
+  senao
+    se (mh < 7) entao
+      conceito <- 1 
+    senao
+      se (mh < 8) entao
+        conceito <- 2 
+      senao
+        se (mh < 9) entao
+          conceito <- 3 
+        senao
+          conceito <- 4 
+        fimse
+      fimse
+    fimse
+  fimse
+
+  escreva(mh,conceito) 
+  
+fimalgoritmo

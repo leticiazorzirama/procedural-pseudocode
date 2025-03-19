@@ -1,0 +1,43 @@
+#Para enviar uma carta são necessários um selo e um envelope. O selo custa 12 centavos e o envelope custa 5 centavos. 
+#Faça um algoritmo que leia uma quantia inicial de selos, envelopes e centavos, e escreva o número de cartas que podem ser 
+#enviadas com esses selos, envelopes e centavos (utilizando-os para comprar mais selos e envelopes). 
+#Considere que não é possível converter selos ou envelopes em dinheiro.
+
+var
+  
+  selos, envelopes, centavos, custo, total: inteiro
+  
+inicio
+  
+  leia(selos, envelopes, centavos) 
+  // se a quantidade de selos for maior que a de envelopes, calcula-se a quantidade de envelopes a serem comprados
+  se selos > envelopes entao
+    custo <- (selos - envelopes) * 5 
+    // verificar se há centavos suficientes para comprar toda a quantidade de selos
+    se centavos >= custo entao
+      total <- selos 
+    senao
+      // se não tiver centavos suficientes, calcular quantos dará para comprar
+      total <- envelopes + (centavos\5) 
+    fimse
+  senao
+    // se a quantidade de envelopes for maior ou igual a quantidade de selos, calcula-se a quantidade de selos a serem comprados
+    custo <- (envelopes - selos) * 12 
+    // verificar se há centavos suficientes para comprar toda a quantidade de selos
+    se centavos >= custo entao
+      total <- envelopes 
+    senao
+      // se não tiver centavos suficientes, calcular quantos dará para comprar
+      total <- selos + (centavos\12) 
+    fimse
+  fimse
+  
+  // verificar se ainda sobrou dinheiro para poder enviar mais cartas, considerando que o total do envio custa 17 centavos
+  centavos <- centavos - custo 
+  se centavos >= 17 entao
+    total <- total + centavos\17 
+  fimse
+  
+  escreva (total) 
+  
+fimalgoritmo 

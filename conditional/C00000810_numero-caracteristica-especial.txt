@@ -1,0 +1,29 @@
+#O número 3025 tem a seguinte característica: 30+25=55 e 55^2=3025. 
+#Faça um algoritmo que leia um número de quatro dígitos e verifique se tem essa característica, escrevendo: 
+#0 - se não tem essa característica; 
+#1 - se tem essa característica.
+
+var
+
+  n, n1, n2, n3, n4 : inteiro
+  
+inicio
+
+  //ler um número de 4 dígitos
+  //o número deve ser separado ao meio, 
+  //os 2 números resultantes devem ser somados 
+  //o resultado da soma elevado ao quadrado deve retornar o número original
+  leia(n) 
+
+  n1 <- n\100 
+  n2 <- n% 100 
+  n3 <- n1 + n2 
+  n4 <- n3 ^ 2 
+  
+  se (n4 = n) entao
+    escreva("1") 
+  senao
+    escreva("0") 
+  fimse
+  
+fimalgoritmo

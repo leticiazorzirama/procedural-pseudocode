@@ -1,0 +1,52 @@
+#As tarifas de um estacionamento são definidas assim: A primeira e a segunda hora custam 5 reais cada. 
+#A terceira e a quarta hora custam 2 reais cada. A partir da quinta hora, cada hora custa 1 real cada. 
+#Assim, se um carro ficar 5 horas no estacionamento, o motorista pagará 15 reais (5+5+2+2+1). 
+#Faça um algoritmo que leia dois valores He e Hs, respectivamente a hora de entrada e saída no estacionamento (horas inteiras, sem minutos), e escreva o valor a ser pago. 
+#Considere que o usuário deve retirar seu carro antes da meia-noite, ou seja, ele não pode entrar em um dia e sair no dia seguinte.
+
+var
+  
+  he, hs, duracao, tempo1, tempo2, tempo3, pgmto : inteiro
+  
+inicio
+
+  leia (he, hs) 
+  // 1ª e 2ª hora -> 5,00
+  // saída menos entrada vai ser até 2
+  // mas vou calcular o pagamento total com o valor das 2 primeiras horas e ir descontando
+  
+  // duracao -> hs - he ... digamos que o tempo1 seja de 8 horas
+  // tempo1 -> hs - he
+  // pgmto -> tempo1 * 5...8 * 5 = 40
+  duracao <- hs - he 
+  tempo1 <- hs - he 
+  pgmto <- tempo1 * 5 
+  
+  // 3ª e 4ª horas -> R$ 2,00
+  // saída menos entrada vai ser acima de 2 e menor ou igual a 4
+  // trocar as horas a mais que a 1ª e a 2ª pelos valores de 3ª e 4ª horas
+  // tempo1 -> 2
+  // tempo2 -> duracao - tempo1...digamos que o tempo2 vai se tornar 6 horas
+  // pgmto -> (tempo1 * 5) + (tempo2 * 2)...2 * 5 = 10 e 6 * 2 = 12 -> 22
+  se duracao > 2 entao
+    tempo1 <- 2 
+    tempo2 <- duracao - tempo1 
+    pgmto <- (tempo1 * 5) + (tempo2 * 2) 
+  fimse
+  
+  // 5ª hora em diante -> R$ 1,00
+  // saída menos entrada vai ser acima de 4
+  // trocar as horas a mais que a 1ª/2ª; 3ª/4ª pelo valor de 5 horas em diante
+  // tempo2 -> 2
+  // tempo3 -> duracao - (tempo1 + tempo2)...digamos que o tempo3 vai se tornar 4 horas
+  // pgmto -> (tempo3 * 1) + (tempo2 * 2) + (tempo3 * 5)...4*1 = 4 ; 2 * 2 = 4; 2 * 5 = 10 -> 18
+  
+  se duracao > 4 entao
+    tempo2 <- 2 
+    tempo3 <- duracao - (tempo1 + tempo2) 
+    pgmto <- (tempo3 * 1) + (tempo2 * 2) + (tempo1 * 5) 
+  fimse
+  
+  escreva(pgmto) 
+  
+fimalgoritmo 

@@ -1,0 +1,33 @@
+#Faça um algoritmo que implemente uma calculadora de 4 operações. 
+#O algoritmo deve ler, nessa ordem: o primeiro operando, o operador (+,-,*,/) e o segundo operando, e deve escrever o resultado da operação. 
+#Por exemplo, se o usuário digitar 2,+,3  o algoritmo deve escrever 5. 
+
+var
+
+  operando1, operando2, resultado : realoperador : literal
+
+inicio
+
+  leia(operando1, operador, operando2) 
+
+  se operador = "+"entao
+    resultado <- operando1 + operando2 
+    escreva(resultado) 
+  fimse
+
+  se operador = "*"entao
+    resultado <- operando1 * operando2 
+    escreva(resultado) 
+  fimse
+
+  se operador = "-"entao
+    resultado <- operando1 - operando2 
+    escreva(resultado) 
+  fimse
+
+  se operador = "/"entao
+    resultado <- operando1 /operando2 
+    escreva(resultado) 
+  fimse
+
+fimalgoritmo

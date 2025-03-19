@@ -1,0 +1,29 @@
+#Faça um algoritmo que leia 3 valores l1, l2 e l3 e verifique se formam um triângulo e, se formarem, o tipo de triângulo formado, escreva: 
+#0 - se não formarem triângulo; 
+#1 - se formarem um triângulo equilatero (os três lados são iguais); 
+#2 - se formarem um triângulo isósceles (dois lados iguais e um diferente); 
+#3 - se formarem um triângulo escaleno (3 lados diferentes).
+
+var
+
+  a, b, c : inteiro
+
+inicio
+
+  leia(a, b, c) 
+
+  se ((abs(b - c)) < a ) e (a < b + c) e ((abs(a - c)) < b) e (b < a + c) e ((abs(a - b)) < c) e (c < a + b) entao
+    se a = b e a = c e b = c entao
+      escreva("1") 
+    fimse
+    se (a = b e a <> c) ou (a <> b e b = c) ou ( b <> c e a = c) entao
+      escreva ("2") 
+    fimse
+    se a <> b e a <> c e b <> c entao
+      escreva ("3") 
+    fimse
+  senao
+    escreva ("0") 
+  fimse
+
+fimalgoritmo

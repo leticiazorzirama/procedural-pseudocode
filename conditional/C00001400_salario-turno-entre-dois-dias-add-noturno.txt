@@ -1,0 +1,108 @@
+#Faça um algoritmo que leia para um trabalhador o valor que ganha por hora, a hora de entrada e a hora
+#de saída (valores inteiros, sem minutos) e calcule quanto ele ganhou pelo turno. Considere que ele 
+#pode entrar em um dia e sair no outro, mas que o total de horas trabalhadas não excede 23 horas. 
+#Considere também que as horas antes das 6:00 da manhã e a partir das 20:00 valem 20% a mais (adicional noturno).
+
+var
+  
+  vh, he, hs, tn, t6, t20 : inteiro
+  pagamento : real
+  
+inicio
+  
+  leia(vh, he, hs) 
+  
+  //Entrou e saiu no mesmo dia
+  se (he < hs) entao
+    // Entrou antes das 6 h
+    se (he < 6) entao
+      // Saiu depois das 20 h
+      se (hs > 20) entao
+        t6 <- 6-he 
+        tn <- 14 
+        t20 <- hs-20 
+        // Saiu entre às 6 h e às 20 h
+      senao
+        se (hs > 6) entao
+          t6 <- 6-he 
+          tn <- hs-6 
+          t20 <- 0 
+          // Saiu antes das 6 h
+        senao
+          t6 <- hs-he 
+          tn <- 0 
+          t20 <- 0 
+        fimse
+      fimse
+    senao
+      // Entrou depois das 6 h 
+      se (he < 20) entao
+        t6 <- 0 
+        // Saiu antes das 20 h
+        se (hs < 20) entao
+          tn <- hs-he 
+          t20 <- 0 
+          // Saiu depois das 20 h
+        senao
+          tn <- 20-he 
+          t20 <- hs-20 
+        fimse
+        // Entrou e saiu depois das 20 h
+      senao
+        t6 <- 0 
+        tn <- 0 
+        t20 <- hs-he 
+      fimse
+    fimse
+  senao
+    // Entrou num dia e saiu no dia seguinte
+    // Entrou antes das 6 h
+    se (he < 6) entao
+      // Saiu antes das 6 h
+      se (hs < 6) entao
+        t6 <- (6-he) + hs 
+        tn <- 14 
+        t20 <- 4 
+      fimse
+    senao
+      // Entrou depois das 6 h e antes das 20 h
+      se (he < 20) entao
+        // Saiu antes das 6 h
+        se (hs < 6) entao
+          t6 <- hs 
+          tn <- 20-he 
+          t20 <- 4 
+        senao
+          // Saiu depois das 6 h
+          t6 <- 6 
+          tn <- (20-he) + (hs-6) 
+          t20 <- 4 
+        fimse
+      senao
+        // Entrou depois das 20 h
+        // Saiu antes das 6 h
+        se (hs < 6) entao
+          t6 <- hs 
+          tn <- 0 
+          t20 <- 24-he 
+        senao
+          // Saiu depois das 6 h e antes das 20 h
+          se (hs < 20) entao
+            t6 <- 6 
+            tn <- hs-6 
+            t20 <- 24-he 
+          senao
+            // Saiu depois das 20 h
+            t6 <- 6 
+            tn <- 14 
+            t20 <- (24-he) + (hs-20) 
+          fimse
+        fimse
+      fimse
+    fimse
+  fimse
+  
+  pagamento <- ((1.2 * t6) + tn + (1.2 * t20)) * vh 
+  escreva(pagamento) 
+  
+fimalgoritmo

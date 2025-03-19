@@ -1,0 +1,18 @@
+#Faça um algoritmo que leia dois valores e escreva os dois em ordem crescente.
+
+var
+
+  a, b : inteiro
+
+inicio
+
+  leia(a) 
+  leia(b) 
+
+  se a < b entao
+    escreva(a,b) 
+  senao
+    escreva(b,a) 
+  fimse
+
+fimalgoritmo

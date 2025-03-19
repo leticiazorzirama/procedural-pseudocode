@@ -1,0 +1,58 @@
+#Faça um algoritmo que leia 4 valores a,b,c,d representando os limites inferior e superior de dois intervalos fechados [a,b] e [c,d] 
+#e escreva os limites inferior e superior do intervalo resultante da intersecção dos dois intervalos. 
+#Ex: A intersecção entre os intervalos [1,5] e [2,4] é o intervalo [2,4]. 
+#Se os intervalos forem disjuntos, isso é, não tiverem intersecção, escreva "Intervalos são disjuntos".
+
+var
+  
+  a, b, c, d, aux : inteiro
+  
+inicio
+  
+  leia (a, b, c, d) 
+  
+  // reordenar  [a,b] e [c,d] do menor para o maior
+  se b < a entao
+    aux <- b 
+    b <- a 
+    a <- aux 
+  fimse
+  
+  se d < c entao
+    aux <- d 
+    d <- c 
+    c <- aux 
+  fimse
+  
+  // 1° bloco de se - fixar o c < a e testar hipóteses diferentes para o d
+  se (c < a) entao
+    se (d < a) entao
+      escreva ("Intervalos são disjuntos") 
+    senao
+      se (d <= b) entao
+        escreva (a, d) 
+      senao
+        se (d > b) entao
+          escreva (a, b) 
+        fimse
+      fimse
+    fimse
+    
+    // 2º bloco de se - fixar a < c < d e testar hipóteses diferentes para o d
+  senao
+    se (c > a) entao
+      se (c > b) entao
+        escreva ("Intervalos são disjuntos") 
+      senao
+        se (d < b) entao
+          escreva (c, d) 
+        senao
+          se (d > b) entao
+            escreva (c, b) 
+          fimse
+        fimse
+      fimse
+    fimse
+  fimse
+  
+fimalgoritmo
