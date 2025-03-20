@@ -1,0 +1,20 @@
+#Faça um algoritmo que leia um valor N inteiro e maior do que 1, e calcule e escreva o seu maior divisor (excetuando N).
+
+var
+
+  n, divisor : inteiro
+  
+inicio
+  
+  leia(n)
+ 
+  divisor <- n
+
+  repita
+    divisor <- divisor-1 
+
+  ate (n % divisor = 0) 
+  
+  escreva(divisor) 
+  
+fimalgoritmo

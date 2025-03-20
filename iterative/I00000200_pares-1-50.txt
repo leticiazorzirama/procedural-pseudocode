@@ -1,0 +1,13 @@
+#Faça um algoritmo que escreva todos os números pares entre 1 e 50.
+
+var
+  
+  n : inteiro
+  
+inicio
+  
+  para n de 1 ate 25 faca
+    escreval(n*2) 
+  fimpara
+  
+fimalgoritmo

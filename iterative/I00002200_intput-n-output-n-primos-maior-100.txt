@@ -1,0 +1,29 @@
+#Faça um algoritmo que leia um número N e escreva os N primeiros números primos maiores que 100.
+
+var
+  
+  n, divisor, x : inteiro
+  
+inicio
+  
+  leia(n) 
+  divisor <- 1 
+  x <- 100 
+  
+  enquanto (n > 0) faca
+    
+    repita
+      divisor <- divisor + 1 
+    ate (x % divisor = 0) 
+    
+    se (divisor = x) entao
+      escreval(x) 
+      n <- n - 1 
+    fimse
+    
+    divisor <- 1 
+    x <- x + 1 
+    
+  fimenquanto
+  
+fimalgoritmo

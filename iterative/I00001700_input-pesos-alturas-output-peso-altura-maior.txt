@@ -1,0 +1,23 @@
+#Faça um algoritmo que leia, para 10 pessoas, seu peso e altura e escreva o peso e a altura da pessoa mais alta.
+
+var
+  
+  peso1, altura1, mais_alta, peso_da_mais_alta, p, a : real
+  i : inteiro
+  
+inicio
+
+  leia(peso1, altura1) 
+  mais_alta <- altura1 
+  peso_da_mais_alta <- peso1 
+  
+  para i de 1 ate 9 faca
+    leia(p, a) 
+    se (a > mais_alta) entao
+      mais_alta <- a 
+      peso_da_mais_alta <- p 
+    fimse
+  fimpara
+  escreva(peso_da_mais_alta, mais_alta) 
+  
+fimalgoritmo

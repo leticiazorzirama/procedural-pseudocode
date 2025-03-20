@@ -1,0 +1,40 @@
+#Dois números n1 e n2 são ditos amigos entre si se a soma dos divisores de n1 (excluindo o próprio n1) é igual a n2, 
+#e a soma dos divisores de n2 (excluindo o próprio n2) é igual a n1. Ex: 220 e 284. Faça um algoritmo que leia 2 valores 
+#e verifique se são amigos entre si escrevendo: 1 - se são amigos; 0 - se não são amigos.
+
+var
+  
+  n1, n2, divisor1, divisor2, soma1, soma2 : inteiro
+  
+inicio
+  
+  leia(n1, n2) 
+  divisor1 <- 1 
+  divisor2 <- 1 
+  soma1 <- 0 
+  soma2 <- 0 
+  
+  //laço para somar os divisores de n1 e salvar a soma numa variável soma1
+  enquanto divisor1 < n1 faca
+    se (n1 % divisor1 = 0) entao
+      soma1 <- soma1 + divisor1 
+    fimse
+    divisor1 <- divisor1 + 1 
+  fimenquanto
+  
+  //laço para somar os divisores de n2 e salvar a soma em outra variável soma2
+  enquanto divisor2 < n2 faca
+    se (n2 % divisor2 = 0) entao
+      soma2 <- soma2 + divisor2 
+    fimse
+    divisor2 <- divisor2 + 1 
+  fimenquanto
+  
+  //comparar se o soma1 é igual ao n2 e se o soma2 é igual ao n1
+  se (soma1 = n2) e (soma2 = n1) entao
+    escreva("1") 
+  senao
+    escreva("0") 
+  fimse
+  
+fimalgoritmo

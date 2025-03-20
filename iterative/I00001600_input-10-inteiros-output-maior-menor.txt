@@ -1,0 +1,27 @@
+#Faça um algoritmo que leia 10 números e escreva ao final o maior e o menor deles.
+
+var
+
+  i, maior, menor, n, m : inteiro
+
+inicio
+  
+  leia(n) 
+  maior <- n 
+  menor <- n 
+
+  //dentro do laço, encontrar o maior e o menor
+  para i de 1 ate 9 faca
+    leia(m) 
+    se m > maior entao
+      maior <- m 
+    senao
+      se m < menor entao
+        menor <- m 
+      fimse
+    fimse
+  fimpara
+  
+  escreva(maior, menor) 
+  
+fimalgoritmo

@@ -1,0 +1,17 @@
+#Faça um algoritmo que leia 10 números e escreva os que forem pares. 
+
+var
+
+  i, num : inteiro
+
+inicio
+
+  para i de 1 ate 10 faca
+    escreva("Digite um valor: ") 
+    leia(num) 
+    se (num % 2 = 0) entao
+      escreval(num) 
+    fimse
+  fimpara
+  
+fimalgoritmo

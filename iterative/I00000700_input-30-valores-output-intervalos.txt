@@ -1,0 +1,42 @@
+#Faça um algoritmo que leia 30 valores e conte quantos estão em cada um dos intervalos 
+#[0,25],(25,50], (50,75], (75..100], escrevendo ao final essa informação.
+
+var
+  
+  n, controle, c1, c2, c3, c4 : inteiro
+  
+inicio
+  
+  controle <- 0 
+  c1 <- 0 
+  c2 <- 0 
+  c3 <- 0 
+  c4 <- 0 
+  
+  repita
+    controle <- controle + 1 
+    
+    escreva("Digite um número: ") 
+    leia(n) 
+    
+    se (n >= 0) e (n <= 25) entao
+      c1 <- c1 + 1 
+    fimse
+    
+    se (n > 25) e (n <= 50) entao
+      c2 <- c2 + 1 
+    fimse
+    
+    se (n > 50) e (n <= 75) entao
+      c3 <- c3 + 1 
+    fimse
+    
+    se (n > 75) e (n <= 100) entao
+      c4 <- c4 + 1 
+    fimse
+    
+  ate controle >= 30 
+  
+  escreval(c1, c2, c3, c4) 
+  
+fimalgoritmo

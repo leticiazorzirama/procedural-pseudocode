@@ -1,0 +1,23 @@
+#Faça um algoritmo que leia um número inteiro N e escreva o maior número primo menor do que N.
+
+var
+  
+  n, divisor : inteiro
+  
+inicio
+  
+  leia(n) 
+  
+  repita
+    n <- n - 1 
+    divisor <- 1 
+    
+    repita
+      divisor <- divisor + 1 
+    ate (n % divisor = 0) 
+    
+  ate (n = divisor) 
+
+  escreva(n)
+  
+fimalgoritmo

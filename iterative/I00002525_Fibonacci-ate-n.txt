@@ -1,0 +1,31 @@
+#Faça um algoritmo que leia um número (N) e escreva o enésimo número da série de Fibonacci.
+
+var
+  
+  n, n1, n2, i, soma, aux: inteiro
+  
+inicio
+  
+  n1 <- 0 
+  n2 <- 1 
+  soma <- 1 
+  leia(n) 
+  
+  se (n = 0) entao
+    escreva ("0") 
+  senao
+    se (n = 1) entao
+      escreva("1") 
+    senao
+      para i de 1 ate (n-1) faca
+        aux <- n1 
+        n1 <- soma 
+        n2 <- aux 
+        soma <- soma + n2 
+      fimpara
+      
+      escreva(soma) 
+    fimse
+  fimse
+  
+fimalgoritmo

@@ -1,0 +1,29 @@
+#Um número perfeito é o número que é igual a soma de seus divisores, exceto o próprio número (ex: 6 = 1 + 2 + 3). 
+#Faça um algoritmo que leia 10 números e verifique para cada um se é perfeito ou não, escrevendo: 
+#1 - se o número é perfeito;  
+#0 - se o número não é perfeito.
+
+var
+  
+  i, n, soma, d : inteiro
+  
+inicio
+  
+  para i de 1 ate 10 faca
+    leia(n) 
+    soma <- 0 
+    
+    para d de 1 ate (n-1) faca
+      se (n % d = 0) entao
+        soma <- soma + d 
+      fimse
+    fimpara
+    
+    se (soma = n) entao
+      escreva("1") 
+    senao
+      escreva("0") 
+    fimse
+  fimpara
+  
+fimalgoritmo

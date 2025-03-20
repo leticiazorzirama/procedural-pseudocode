@@ -1,0 +1,64 @@
+#Um número primo é um número natural maior que 1, que é divisível somente por 1 e por ele mesmo. 
+#Faça um algoritmo que leia um número inteiro N e escreva o número primo mais próximo a ele. 
+#Se N for primo, considere que o mais próximo é o próprio N. 
+#Se houver dois números à mesma distância, escreva os dois em ordem crescente.
+
+var
+  
+  n, divisor, primo1, primo2, prox1, prox2 : inteiro
+  
+inicio
+  
+  leia(n) 
+  divisor <- 1 
+  
+  // testar se n é primo
+  repita
+    divisor <- divisor + 1 
+  ate (n % divisor = 0) 
+  
+  se (n = divisor) entao
+    escreva(n) 
+  senao
+    
+    // se n não for primo, encontrar os primos mais próximos acima e abaixo de n
+    primo1 <- n 
+    primo2 <- n 
+    
+    // conferindo o primo mais próximo, menor que n
+    repita
+      primo1 <- primo1 - 1 
+      divisor <- 1 
+      repita
+        divisor <- divisor + 1 
+      ate (primo1 % divisor = 0) 
+    ate (primo1 = divisor) 
+
+    // registrando a distância do primo1 até o n
+    prox1 <- n - primo1 
+
+    // conferindo o primo mais próximo, maior que n
+    repita
+      primo2 <- primo2 + 1 
+      divisor <- 1 
+      repita
+        divisor <- divisor + 1 
+      ate (primo2 % divisor = 0) 
+    ate (primo2 = divisor) 
+
+    // registrando a distância do primo1 até o n
+    prox2 <- primo2 - n 
+
+    // comparando as distâncias
+    se (prox1 = prox2) entao
+      escreval(primo1, primo2) 
+    senao
+      se (prox1 < prox2) entao
+        escreval(primo1) 
+      senao
+        escreval(primo2) 
+      fimse
+    fimse
+  fimse
+  
+fimalgoritmo

@@ -1,0 +1,22 @@
+#Um número inteiro maior do que 1 é primo se ele possui como divisores somente o 1 e ele mesmo. Faça um algoritmo que leia um número e verifique se é primo escrevendo: 1 - se o número é primo; 0 - se o número não é primo.  
+
+var
+  
+  n, divisor : inteiro
+  
+inicio
+  
+  leia(n) 
+  divisor <- 1 
+  
+  repita
+    divisor <- divisor + 1 
+  ate (n % divisor = 0) 
+  
+  se (divisor = n) entao
+    escreva("1") 
+  senao
+    escreva("0") 
+  fimse
+  
+fimalgoritmo

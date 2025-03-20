@@ -1,0 +1,27 @@
+#Faça um algoritmo que leia 10 números e escreva os que forem primos.
+
+var
+  
+  i, n, divisor : inteiro
+  
+inicio
+  
+  divisor <- 1 
+  
+  // laços aninhados, a cada iteração mais de fora, confere na de dentro se o n é primo
+  para i de 1 ate 10 faca
+    leia(n) 
+    
+    repita 
+      divisor <- divisor + 1                   
+    ate (n % divisor = 0) 
+    
+    se (divisor = n) entao
+      escreval(n) 
+    fimse
+    
+    divisor <- 1 
+    
+  fimpara
+  
+fimalgoritmo

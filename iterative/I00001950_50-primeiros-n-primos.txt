@@ -1,0 +1,38 @@
+#Faça um algoritmo que escreva os 50 primeiros números primos.
+
+// pseudocódigo:
+// começa com o n = 3 e já escreve o 2 que é o único par primo
+// a cada iteração vai somando 2 então só testa os ímpares
+// a contagem só conta quando é número primo e vai ser o controle até encontrar o 50º primo
+
+var
+  
+  contagem, n, divisor : inteiro
+  
+inicio
+  
+  contagem <- 1 
+  n <- 3 
+  divisor <- 1
+  
+  enquanto (contagem < 50) faca
+    
+    se (n = 3) entao
+      escreval("2") 
+    fimse
+    
+    repita
+        divisor <- divisor + 1 
+      ate (n % divisor = 0) 
+      
+    se (divisor = n) entao
+        escreval(n)
+        contagem <- contagem + 1 
+    fimse
+      
+    divisor <- 1 
+    n <- n + 2  
+    
+  fimenquanto
+  
+fimalgoritmo

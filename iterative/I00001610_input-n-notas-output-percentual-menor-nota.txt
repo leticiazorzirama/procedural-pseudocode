@@ -1,0 +1,52 @@
+#Faça um algoritmo que leia um valor n (n>=1) correspondente  ao número de alunos de uma turma. 
+#Após, o algoritmo lê as notas das  provas dos n alunos dessa turma. 
+#As notas deverão ser lidas até que sejam informadas n notas válidas, ou seja, no intervalo [0, 10], descartando as notas fora desse intervalo. 
+#As notas somente poderão ser lidas uma única vez. 
+#O algoritmo deve informar qual foi a menor nota e o percentual dos alunos que tiraram a menor nota (que não é, necessariamente, 0). 
+#Por exemplo, se o valor lido para n foi 20 e as notas foram
+#6.0 6.5 8.0 9.0 4.5 3.0 9.0 8.5 4.5 3.0 6.0 3.0 8.0 9.0 4.5 10 9.0 8.5 4.5 3.0
+#o algoritmo escreve 3.0 e 20, já que quatro (20% de 20) alunos tiraram essa nota.
+
+var
+  
+  n, primeira_nota, i, nota, menor_nota, alunos_menor_nota : inteiro
+  percentual : real
+  
+inicio
+  
+  //o algoritmo deve informar qual foi a menor nota e o percentual dos alunos que tiraram a menor nota (que não é, necessariamente, 0) 
+  
+  leia(n) 
+  //valor n (n>=1) correspondente  ao número de alunos de uma turma 
+  
+  leia(primeira_nota) 
+  menor_nota <- primeira_nota 
+  alunos_menor_nota <- 1 
+  
+  para i de 1 ate (n-1) faca
+    leia(nota) 
+    //lê as notas das provas dos n-1 alunos dessa turma          
+    se (nota >= 0) e (nota <= 10) entao
+      //as notas deverão ser lidas até que sejam informadas n notas válidas, ou seja, no intervalo [0, 10], descartando as notas fora desse intervalo
+      se (nota < menor_nota) entao
+        //atualizar a variável menor_nota
+        menor_nota <- nota 
+        alunos_menor_nota <- 0 
+      fimse
+    senao
+      i <- i - 1 
+      //se for uma nota fora do intervalo, o i repete a iteração
+    fimse
+    
+    se (nota = menor_nota) entao
+      //contagem da quantidade de alunos que tiraram a mesma menor nota
+      alunos_menor_nota <- alunos_menor_nota + 1 
+    fimse
+    
+  fimpara
+  
+  percentual <- (alunos_menor_nota/n)*100 
+  
+  escreva(menor_nota, percentual) 
+  
+fimalgoritmo

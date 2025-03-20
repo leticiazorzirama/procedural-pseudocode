@@ -1,0 +1,18 @@
+#Faça um algoritmo que leia um valor N, e escreva todos os seus divisores. 
+
+var
+
+  n, i : inteiro
+
+inicio
+  
+  escreva("Digite um número: ") 
+  leia(n) 
+  
+  para i de 1 ate n faca
+    se (n % i = 0) entao
+      escreval(i) 
+    fimse
+  fimpara
+  
+fimalgoritmo

@@ -1,0 +1,33 @@
+#Faça um algoritmo que leia 2 números N1 e N2 e escreva a soma dos números primos entre N1 e N2 (incluindo N1 e N2 se algum deles for primo).
+
+// pseucódigo:
+// laço de fora: 'para" com os limites definidos por n1 e n2
+// laço de dentro: "repita" testando se é primo, se for, entra na soma
+
+var
+  
+  i, n1, n2, divisor, soma : inteiro
+  
+inicio
+  
+  leia(n1, n2) 
+  divisor <- 1 
+  soma <- 0 
+  
+  para i de n1 ate n2 faca
+
+    repita
+      divisor <- divisor + 1 
+    ate (i % divisor = 0) 
+
+    se (divisor = i) entao
+      soma <- soma + i 
+    fimse
+
+    divisor <- 1 
+
+  fimpara
+
+  escreva(soma) 
+  
+fimalgoritmo

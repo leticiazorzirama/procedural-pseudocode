@@ -1,0 +1,27 @@
+#Faça um algoritmo que leia 30 valores e conte quantos estão no intervalo [10,20], 
+#escrevendo ao final essa informação.
+
+var
+  
+  n, controle, contagem : inteiro
+  
+inicio
+  
+  controle <- 0 
+  contagem <- 0 
+  
+  repita
+    controle <- controle + 1 
+    
+    escreva("Digite um número: ") 
+    leia(n) 
+    
+    se (n >= 10) e (n <= 20) entao
+      contagem <- contagem + 1 
+    fimse
+    
+  ate controle >= 30 
+  
+  escreva(contagem) 
+  
+fimalgoritmo

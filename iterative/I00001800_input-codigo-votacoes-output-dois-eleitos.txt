@@ -1,0 +1,56 @@
+#Faça um algoritmo que leia o código e a votação de cada um dos candidatos a uma vaga no senado, 
+#até que o código digitado seja 0 (não deverá ser lida a votação neste caso). 
+#O algoritmo deve escrever os códigos e as votações dos dois senadores eleitos (assuma que não haverão três candidatos com igual votação e que seja a maior votação). 
+#O algoritmo deve escrever primeiro os dados do mais votado, e em seguida os dados do segundo mais votado.
+
+var
+  
+  c1, v1, c2, v2, c, v, vaux, caux : inteiro
+  candidato_primeiro_lugar, primeira_maior_votacao, candidato_segundo_lugar, segunda_maior_votacao : inteiro
+  
+inicio
+  
+  leia(c1, v1, c2, v2) 
+  se (v1 > v2) entao
+    primeira_maior_votacao <- v1 
+    candidato_primeiro_lugar <- c1 
+    segunda_maior_votacao <- v2 
+    candidato_segundo_lugar <- c2 
+  senao
+    primeira_maior_votacao <- v2 
+    candidato_primeiro_lugar <- c2 
+    segunda_maior_votacao <- v1 
+    candidato_segundo_lugar <- c1 
+  fimse
+  
+  c <- 1 
+  
+  enquanto (c <> 0) faca
+    leia(c) 
+    enquanto (c <> 0) faca
+      leia (v) 
+      se (v > primeira_maior_votacao) entao
+        vaux <- primeira_maior_votacao 
+        caux <- candidato_primeiro_lugar 
+        primeira_maior_votacao <- v 
+        candidato_primeiro_lugar <- c 
+        segunda_maior_votacao <- vaux 
+        candidato_segundo_lugar <- caux 
+      senao
+        se (v = primeira_maior_votacao) entao
+          segunda_maior_votacao <- v 
+          candidato_segundo_lugar <- c 
+        senao
+          se (v > segunda_maior_votacao) e (v < primeira_maior_votacao) entao
+            segunda_maior_votacao <- v 
+            candidato_segundo_lugar <- c 
+          fimse
+        fimse
+      fimse
+      leia(c) 
+    fimenquanto
+  fimenquanto
+  
+  escreva(candidato_primeiro_lugar, primeira_maior_votacao, candidato_segundo_lugar, segunda_maior_votacao) 
+  
+fimalgoritmo

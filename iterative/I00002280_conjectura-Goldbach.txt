@@ -1,0 +1,46 @@
+#A conjectura de Goldbach diz que todo número par maior que 2 pode ser representado como a soma de dois números primos. Assim, 4=2+2, 6=3+3, 8=3+5... 
+#Faça um algoritmo que leia um número N, par, e escreva, em ordem crescente, os dois números primos que o compõem. No caso de haver mais de um par 
+#de números (p.ex:20=3+17 e 20=7+13) escreva o par que tiver o menor número primo.
+
+// pseudocódigo:
+// laço de fora: menor primo da soma
+// laço de dentro: primos que vão testando soma com o primo de fora
+
+var
+  
+  n, i, x, divisor, testa_soma : inteiro
+  
+inicio
+  leia(n) 
+  
+  // encontrando o primeiro primo da soma, no laço de fora
+  para i de 2 ate n faca
+    divisor <- 1 
+    
+    repita
+      divisor <- divisor + 1 
+    ate (i % divisor = 0) 
+    
+    se (i = divisor) entao
+      
+      // encontrando o segundo primo da soma, no laço de dentro
+      para x de 2 ate n faca
+        divisor <- 1 
+        
+        repita
+          divisor <- divisor + 1 
+        ate (x % divisor = 0) 
+        
+        se (x = divisor) entao
+          testa_soma <- i + x 
+
+          se (testa_soma = n) entao
+            escreva(i,x) 
+
+          fimse
+        fimse
+      fimpara
+    fimse
+  fimpara
+  
+fimalgoritmo 

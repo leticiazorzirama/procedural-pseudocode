@@ -1,0 +1,21 @@
+#Faça um algoritmo que leia 10 números, positivos ou negativos, e escreva ao final o maior deles.
+
+var
+  
+  n, i, x, maior : inteiro
+  
+inicio
+  
+  leia(n) 
+  maior <- n 
+  
+  para i de 1 ate 9 faca
+    leia(x) 
+    se x > maior entao
+      maior <- x 
+    fimse
+  fimpara
+  
+  escreva(maior) 
+  
+fimalgoritmo

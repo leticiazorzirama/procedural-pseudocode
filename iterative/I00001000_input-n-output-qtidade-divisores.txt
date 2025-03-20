@@ -1,0 +1,21 @@
+#Faça um algoritmo que leia um valor N, e conte quantos divisores possui, escrevendo ao final essa informação.
+
+var
+  
+  n, contagem, i : inteiro
+  
+inicio
+  
+  leia(n) 
+  
+  contagem <- 0 
+  
+  para i de 1 ate n faca
+    se (n % i = 0) entao
+      contagem <- contagem + 1 
+    fimse
+  fimpara
+  
+  escreva(contagem) 
+  
+fimalgoritmo

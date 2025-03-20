@@ -1,0 +1,29 @@
+#Faça um algoritmo que leia 2 números N1 e N2 e escreva o produto dos números primos entre N1 e N2 (incluindo N1 e N2 se algum deles for primo).
+
+var
+  
+  i, n1, n2, divisor, produto : inteiro
+  
+inicio
+  
+  leia(n1, n2) 
+  divisor <- 1 
+  produto <- 1 
+  
+  para i de n1 ate n2 faca
+
+    repita
+      divisor <- divisor + 1 
+    ate (i % divisor = 0) 
+
+    se (divisor = i) entao
+      produto <- produto * i 
+    fimse
+
+    divisor <- 1 
+
+  fimpara
+
+  escreva(produto)
+
+fimalgoritmo

@@ -1,0 +1,29 @@
+#O índice de massa corporal (IMC) de uma pessoa é dada pela relação peso/(altura^2). Faça um algoritmo
+#que leia, para 10 pessoas, seu peso e altura e escreva o IMC, peso e altura da pessoa de maior IMC.
+
+var
+  
+  peso, altura, imc, maior_imc, maior_peso, maior_altura : real
+  i : inteiro
+  
+inicio
+  
+  leia(peso, altura) 
+  imc <- peso/(altura^2) 
+  maior_imc <- imc 
+  
+  para i de 1 ate 9 faca
+    leia(peso, altura) 
+    imc <- peso/(altura^2) 
+    
+    se (imc > maior_imc) entao
+      maior_imc <- imc 
+      maior_peso <- peso 
+      maior_altura <- altura 
+    fimse
+    
+  fimpara
+  
+  escreval(maior_imc, maior_peso, maior_altura) 
+  
+fimalgoritmo

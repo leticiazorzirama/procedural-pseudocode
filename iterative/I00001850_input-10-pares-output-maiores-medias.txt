@@ -1,0 +1,54 @@
+#Faça um algoritmo que leia 10 pares de valores e escreva ao final os valores que compõem os 2 pares de maior média 
+#(escreva em primeiro lugar os valores do par de maior média e em seguida os valores do par de segunda maior média).
+
+// pseudocódigo
+// ler 10 pares de valores -> número conhecido de iterações -> comando "para"
+// calcular a média e salvar a média numa variável temporária 
+// criar as variáveis "prim_maior" e "seg_maior" 
+// ir fazendo as comparações a cada iteração
+// ir salvando os pares da prim_maior" e "seg_maior" médias -> x1, y2 e x2, y2, respectivamente
+
+var
+  
+  i, v1, v2, x1, y1, x2, y2, auxx1, auxy1 : inteiro
+  aux, prim_maior, seg_maior, media : real
+  
+inicio
+  
+  prim_maior <- 0 
+  seg_maior <- 0 
+  x1 <- 0 
+  y1 <- 0 
+  
+  para i de 1 ate 10 faca
+    leia(v1, v2) 
+    media <- (v1 + v2)/2 
+    se (media > prim_maior) entao
+      // se a média da iteração for maior que a última maior média salva na variável prim_maior,
+      aux <- prim_maior 
+      // essa última precisa se tornar a segunda maior
+      prim_maior <- media 
+      // então primeiro é necessário fazer essa troca,
+      seg_maior <- aux 
+      auxx1 <- x1 
+      // atualizando também o par de valores que compoe a segunda maior média
+      auxy1 <- y1 
+      x1 <- v1 
+      y1 <- v2 
+      x2 <- auxx1 
+      y2 <- auxy1 
+    senao
+      se (media > seg_maior) entao
+        // uma vez a segunda maior média e o respectivo par de valores atualizados,
+        seg_maior <- media 
+        // caso a presente média e respectivo par de valores for menor que o primeiro valor, 
+        x2 <- v1 
+        // mas maior que o segundo valor, esses se tornarão a segunda maior média e o par de valores dela
+        y2 <- v2 
+      fimse
+    fimse
+  fimpara
+  
+  escreval(x1, y1, x2, y2) 
+  
+fimalgoritmo

@@ -1,0 +1,21 @@
+#Faça um algoritmo que leia um valor N, e calcule e escreva a soma dos seus divisores.  
+
+var
+  
+  n, soma, i : inteiro
+  
+inicio
+  
+  leia(n) 
+  
+  soma <- 0 
+  
+  para i de 1 ate n faca
+    se (n % i = 0) entao
+      soma <- soma + i
+    fimse
+  fimpara
+  
+  escreva(soma) 
+  
+fimalgoritmo

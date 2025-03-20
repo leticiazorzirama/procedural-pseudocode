@@ -1,0 +1,29 @@
+#Faça um algoritmo que leia, para um funcionários: o valor que ganha por hora e 30 pares de valores (hora de entrada e hora de saída, inteiros, sem minutos) 
+#e calcule o quanto ganhou no mês. O funcionário não pode trabalhar mais de 23 horas seguidas e pode iniciar em um dia e terminar no dia seguinte. 
+#Para o funcionário deve ser escrito o quanto ganhou no mês.
+
+var
+  
+  valor, salario, n, he, hs, pagamento : inteiro
+  
+inicio
+  
+  leia(valor) 
+  salario <- 0 
+  
+  para n de 1 ate 30 faca
+    leia(he, hs) 
+    
+    se (he < hs) entao
+      pagamento <- (hs - he) * valor 
+      salario <- salario + pagamento 
+    senao
+      pagamento <- ((24-he) + hs) * valor 
+      salario <- salario + pagamento 
+    fimse
+    
+  fimpara
+  
+  escreva(salario) 
+  
+fimalgoritmo
