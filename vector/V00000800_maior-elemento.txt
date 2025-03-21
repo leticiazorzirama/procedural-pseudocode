@@ -1,0 +1,27 @@
+#Escrever um algoritmo que lê um vetor C(30) e o escreve. 
+#Encontre, a seguir, o maior elemento de C e o escreva.
+
+var
+  
+  v : vetor[0..29] de inteiro
+  i, maior : inteiro
+  
+inicio
+  
+  // Ler os valores
+  para i de 0 ate 29 faca
+    leia(v[i]) 
+    escreva(v[i])
+  fimpara
+
+  maior <- v[0]
+
+  para i de 0 ate 29 faca         
+         se (v[i] > maior) entao
+                  maior <- v[i]
+         fimse
+  fimpara
+
+  escreva(maior)
+
+fimalgoritmo

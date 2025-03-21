@@ -1,0 +1,27 @@
+#Escreva um algoritmo que lê números inteiros e armazene em um vetor de 10 posições. 
+#Ler números até que o vetor esteja completo ou que tenha sido fornecido o valor 0 (zero) que deve ser descartado.  
+#Após, escreva os números que foram armazenados no vetor em ordem inversa a ordem de leitura.
+
+var
+  
+  v : vetor[0..9] de inteiro
+  controle, n, i : inteiro
+  
+inicio
+  
+  controle <- 0 
+  n <- 1 
+  
+  enquanto (controle < 10) e (n <> 0) faca
+    leia(n) 
+    se (n <> 0) entao
+      controle <- controle + 1 
+      v[controle-1] <- n 
+    fimse
+  fimenquanto
+  
+  para i de (controle-1) ate 0 passo -1 faca
+    escreva(v[i]) 
+  fimpara
+  
+fimalgoritmo

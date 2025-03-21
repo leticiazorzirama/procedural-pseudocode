@@ -1,0 +1,32 @@
+#Faça um algoritmo que leia 10 valores e verifique se algum dos valores aparece repetido. 
+#Escreva 1 se algum valor aparece repetido e 0 se não houver nenhum valor repetido.
+
+var
+  
+  v : vetor[0..9] de inteiro
+  i, j : inteiro
+  repetido : logico
+  
+inicio
+  
+  para i de 0 ate 9 faca
+    leia(v[i]) 
+  fimpara
+  
+  repetido <- Falso 
+  
+  para i de 0 ate 8 faca
+    para j de i+1 ate 9 faca
+      se (v[j] = v[i]) entao
+        repetido <- Verdadeiro 
+      fimse
+    fimpara
+  fimpara
+  
+  se (repetido = Verdadeiro) entao
+    escreva("1") 
+  senao
+    escreva("0") 
+  fimse
+  
+fimalgoritmo

@@ -1,0 +1,35 @@
+#Escrever um algoritmo que lê um vetor G(10) contendo o gabarito de uma prova. 
+#Leia a seguir, para cada aluno de um conjunto de 5 alunos suas 10 respostas e 
+#verifique quantas questões acertou, escrevendo para cada aluno o número de acertos.
+
+var
+  
+  g : vetor[0..9] de inteiro
+  aluno: vetor[0..9] de inteiro
+  i, j, n, acertos : inteiro
+  
+inicio
+  
+  para i de 0 ate 9 faca // ler o gabarito e armazenar no vetor g
+    leia(g[i]) 
+  fimpara
+  
+  para j de 0 ate 4 faca  // fazer 5 leituras < loop externo
+   
+    para n de 0 ate 9 faca // de 5 alunos < loop interno
+      leia(aluno[n]) // armazenando cada volta no vetor aluno, temporariamente
+    fimpara
+    
+    acertos <- 0
+
+    para n de 0 ate 9 faca
+      se (g[n] = aluno[n]) entao // já vai comparando, conforme cada nota vai entrando
+        acertos <- acertos + 1  // e somando os acertos
+      fimse
+    fimpara
+
+    escreva(acertos) // imprime os acertos do respectivo aluno
+    
+  fimpara
+  
+fimalgoritmo

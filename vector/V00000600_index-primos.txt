@@ -1,0 +1,33 @@
+#Escreva um algoritmo que lê um vetor A(10) e escreva a 
+#posição de cada elemento primo deste vetor. 
+#Considere que a primeira posição do vetor é a posição 1.
+
+var
+  
+  v : vetor[1..10] de inteiro
+  i, x, divisor : inteiro
+  
+inicio
+  
+  // Ler os valores
+  para i de 1 ate 10 faca
+    leia(v[i]) 
+  fimpara
+  
+  // Contando os primos
+  para i de 1 ate 10 faca
+    divisor <- 0 
+    
+    para x de 1 ate v[i] faca
+      se (v[i] % x = 0) entao
+        divisor <- divisor + 1 
+      fimse
+    fimpara
+    
+    se (divisor = 2) entao
+      escreva(i)
+    fimse
+    
+  fimpara
+  
+fimalgoritmo

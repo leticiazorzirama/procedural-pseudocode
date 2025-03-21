@@ -1,0 +1,37 @@
+#Faça um algoritmo que leia um vetor de 10 elementos. 
+#Leia, a seguir, 10 valores N e, para cada um, verifique se o valor aparece no vetor escrevendo: 
+#0 - se o valor N não aparece no vetor; 
+#1 - se o valor N aparece no vetor.
+
+var
+  
+  v : vetor[0..9] de inteiro
+  i, j, n : inteiro
+  aparece : logico
+  
+inicio
+  
+  para i de 0 ate 9 faca
+    leia(v[i]) 
+  fimpara
+  
+  para i de 0 ate 9 faca
+    aparece <- Falso
+
+    leia(n) 
+
+    para j de 0 ate 9 faca
+      se (v[j] = n) entao
+        aparece <- Verdadeiro
+      fimse
+    fimpara
+
+    se (aparece = Falso) entao
+         escreva("0")
+    senao
+         escreva("1")
+    fimse
+
+  fimpara
+  
+fimalgoritmo

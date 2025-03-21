@@ -1,0 +1,20 @@
+#Faça um algoritmo que leia 10 valores e os escreva na ordem contrária à que foram digitados. 
+
+var
+  
+  v : vetor[0..9] de inteiro
+  i : inteiro
+  
+inicio
+  
+  // Ler os valores
+  para i de 0 ate 9 faca
+    leia(v[i]) 
+  fimpara
+
+  // Escrevendo os valores na ordem contrária
+  para i de 9 ate 0 passo -1 faca
+    escreva(v[i]) 
+  fimpara
+  
+fimalgoritmo

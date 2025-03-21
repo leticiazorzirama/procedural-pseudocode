@@ -1,0 +1,39 @@
+#Faça um algoritmo que leia um número N e escreva os N primeiros números primos em ordem decrescente.
+#Considere que N é no máximo igual a 100.
+
+var
+  
+  v : vetor[0..99] de inteiro
+  n, m, x, divisor, i : inteiro
+  
+inicio
+  
+  leia(n) 
+  n <- n - 1
+  v[n] <- 2 
+  m <- n 
+  m <- m - 1 
+  x <- 3 
+  
+  enquanto (m >= 0) faca
+    
+    divisor <- 1 
+    
+    repita
+      divisor <- divisor + 1 
+    ate (x % divisor = 0) 
+    
+    se (x = divisor) entao
+      v[m] <- x 
+      m <- m - 1 
+    fimse
+    
+    x <- x + 2 
+    
+  fimenquanto
+  
+  para i de 0 ate n faca
+    escreva(v[i])
+  fimpara
+  
+fimalgoritmo

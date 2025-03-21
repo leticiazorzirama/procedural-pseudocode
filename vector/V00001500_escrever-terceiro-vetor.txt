@@ -1,0 +1,41 @@
+#Escrever um algoritmo que lê um vetor X(10) e, após, leia um vetor  Y(10). 
+#Crie, a seguir, um terceiro vetor Z com os elementos que aparecem nos dois vetores (intersecção). 
+#Os elementos devem aparecer no vetor Z na mesma ordem em que aparecem no vetor X. 
+#Considere que não há repetição de valores dentro do mesmo vetor. 
+#Escreva o vetor Z (apenas as posições que foram preenchidas).
+
+var
+  
+  x, y, z : vetor[0..9] de inteiro
+  i, j, tamanho : inteiro
+  
+inicio
+  
+  para i de 0 ate 9 faca
+    leia(x[i]) 
+  fimpara
+  
+  para i de 0 ate 9 faca
+    leia(y[i]) 
+  fimpara
+  
+  para i de 0 ate 9 faca
+    z[i] <- 0 
+  fimpara
+  
+  tamanho <- -1 
+  
+  para i de 0 ate 9 faca
+    para j de 0 ate 9 faca
+      se (y[j] = x[i]) entao
+        tamanho <- tamanho + 1 
+        z[tamanho] <- x[i] 
+      fimse
+    fimpara
+  fimpara
+  
+  para i de 0 ate tamanho faca
+    escreva(z[i])
+  fimpara
+
+fimalgoritmo

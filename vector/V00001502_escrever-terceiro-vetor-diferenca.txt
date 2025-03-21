@@ -1,0 +1,52 @@
+#Escreva um algoritmo que lê 2 vetores K(10) e N(10). 
+#Crie, a seguir, um vetor M que seja a diferença entre K e N (M=K-N), 
+#ou seja, são todos os elementos que estão no vetor K, mas não estão no vetor N. 
+#O vetor M não deve possuir valores duplicados (olhe o exemplo abaixo). 
+#No final o algoritmo deve escrever o vetor M.
+
+var
+  
+  k, n, m : vetor[0..9] de inteiro
+  i, j, x, tamanho : inteiro
+  
+inicio
+  
+  // criando os vetores k, n, m
+  para i de 0 ate 9 faca
+    leia(k[i]) 
+  fimpara
+  
+  para i de 0 ate 9 faca
+    leia(n[i]) 
+  fimpara
+  
+  tamanho <- 0 
+  
+  // selecionando i-ésimo elemento de k
+  para i de 0 ate 9 faca
+    // 0
+    x <- 0 
+    
+    // comparando com todos os elementos de n e somando conforme vai percorrendo a lista n
+    para j de 0 ate 9 faca
+      // 0, 1, 2, ...
+      
+      se (k[i] <> n[j]) entao
+        x <- x + 1 
+      fimse
+      
+      // se o i-ésimo de k for diferente de todos j-ésimos de n, então x vai valer 10 e o i-ésimo de k entra no vetor m
+      se (x = 10) entao
+        m[tamanho] <- k[i] 
+        tamanho <- tamanho + 1 
+      fimse
+      
+    fimpara
+    
+  fimpara
+  
+  para i de 0 ate (tamanho-1) faca
+    escreva(m[i]) 
+  fimpara
+  
+fimalgoritmo

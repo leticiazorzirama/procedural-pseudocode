@@ -1,0 +1,52 @@
+#Faça um algoritmo que leia um vetor V(5), com os valores sorteados em um sorteio de Loto. 
+#Leia, a seguir, para um conjunto de 5 apostadores, seus 5 palpites e escreva, para cada um, 
+#o número de acertos que teve.
+
+var
+  
+  v, apostador, acertos : vetor[0..4] de inteiro
+  i, j, n, m, a : inteiro
+  
+inicio
+  
+  para i de 0 ate 4 faca
+    // ler os valores sorteados e armazenar no vetor v
+    leia(v[i]) 
+  fimpara
+  
+  para j de 0 ate 4 faca
+    // fazer 5 leituras de 5 apostadores < loop externo
+    
+    para n de 0 ate 4 faca
+      // lendo os palpites do j-ésimo apostador < loop interno
+      leia(apostador[n]) 
+      // armazenando cada n-ésimo palpite no vetor do j-ésimo apostador, temporariamente
+    fimpara
+    
+    a <- 0 
+    // variável 'a' irá contabilizar os acertos, começa zerada a cada loop externo
+    
+    para m de 0 ate 4 faca
+      // comparando cada valor sorteados... < loop externo           
+      
+      para n de 0 ate 4 faca
+        // ...com todos os n-ésimos palpites do j-ésimo apostador           
+        se (v[m] = apostador[n]) entao
+          a <- a + 1 
+          // ...e somando os palpites corretos
+        fimse
+      fimpara
+      
+    fimpara
+    
+    acertos[j] <- a 
+    // salvando os acertos do j-ésimo apostador no vetor acertos
+    
+  fimpara
+  
+  para i de 0 ate 4 faca
+    escreva(acertos[i]) 
+  fimpara
+  
+fimalgoritmo
+

@@ -1,0 +1,57 @@
+#Escrever um algoritmo que lê um vetor X(10) e, após, leia um vetor  Y(10). 
+#Crie, a seguir, um terceiro vetor Z com os elementos que aparecem em um X ou em Y (união); 
+#elementos que aparecem em X e Y simultaneamente devem aparecer apenas uma vez em Z. 
+#Os elementos devem aparecer no vetor Z na mesma ordem em que aparecem no vetor X e Y. 
+#Considere que não há repetição de valores dentro do mesmo vetor. 
+#Escreva o vetor Z (apenas as posições que foram preenchidas).
+
+var
+  
+  x, y : vetor[0..9] de inteiro
+  z : vetor[0..19] de inteiro
+  i, j, c, tamanho : inteiro
+  
+inicio
+  
+  // criando os vetores x, y, e z
+  para i de 0 ate 9 faca
+    leia(x[i]) 
+  fimpara
+  
+  para i de 0 ate 9 faca
+    leia(y[i]) 
+  fimpara
+  
+  // copiando todo o vetor x para o vetor z
+  para i de 0 ate 9 faca
+    z[i] <- x[i] 
+  fimpara
+  
+  tamanho <- 10 
+  
+  // selecionando i-ésimo elemento de y
+  para i de 0 ate 9 faca
+    c <- 0 
+    
+    // comparando com todos os elementos de x e somando conforme vai percorrendo a lista x
+    para j de 0 ate 9 faca
+      
+      se (y[i] <> x[j]) entao
+        c <- c + 1 
+      fimse
+      
+      // se o i-ésimo de y for diferente de todos j-ésimos de x, então c vai valer 10 e o i-ésimo de y entra no vetor z
+      se (c = 10) entao
+        z[tamanho] <- y[i] 
+        tamanho <- tamanho + 1 
+      fimse
+      
+    fimpara
+    
+  fimpara
+  
+  para i de 0 ate (tamanho-1) faca
+    escreva(z[i]) 
+  fimpara
+  
+fimalgoritmo

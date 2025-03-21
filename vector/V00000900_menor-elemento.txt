@@ -1,0 +1,30 @@
+#Escrever um algoritmo que lê um vetor N(30) e o escreve. 
+#Encontre, a seguir, o menor elemento e a sua posição no vetor N e escreva: "O menor elemento de N é = ... e a sua posição é ... ". 
+#Considere que a primeira posição do vetor é a posição 1.
+
+var
+  
+  v : vetor[1..30] de inteiro
+  i, menor, posicao : inteiro
+  
+inicio
+  
+  // Ler os valores
+  para i de 1 ate 30 faca
+    leia(v[i]) 
+    escreva(v[i])
+  fimpara
+
+  menor <- v[1]
+  posicao <- 1
+
+  para i de 1 ate 30 faca
+         se (v[i] < menor) entao
+                  menor <- v[i]
+          posicao <- i
+     fimse
+  fimpara
+
+  escreva("O menor elemento de N é = ", menor," e a sua posição é ", posicao)
+
+fimalgoritmo

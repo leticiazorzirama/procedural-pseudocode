@@ -1,0 +1,41 @@
+#Faça um algoritmo que leia 10 valores, calcule sua média e 
+#escreva o valor do menor elemento maior ou igual à média calculada.
+
+var
+  
+  v : vetor[0..9] de inteiro
+  i, n : inteiro
+  media, soma : real
+  
+inicio
+  
+  // Ler os valores
+  para i de 0 ate 9 faca
+    leia(v[i]) 
+  fimpara
+  
+  soma <- 0 
+  
+  // Calcula a soma dos elementos
+  para i de 0 ate 9 faca
+    soma <- soma + v[i] 
+  fimpara
+  
+  // Calcula a média
+  media <- soma/10 
+  
+  // Seleciona os que estão acima da média
+  para i de 0 ate 9 faca
+    se (v[i] >= media) entao
+      n <- v[i]                           // Salva o que está acima da média na variável n... 
+      para i de 0 ate 9 faca
+        se (v[i] < n) e (v[i] >= media) entao  // ...e compara com todos os demais elementos do vetor em um loop interno, desde que também maiores ou igual a média
+          n <- v[i] 
+        fimse
+      fimpara
+    fimse
+  fimpara
+  
+  escreva(n) 
+  
+fimalgoritmo

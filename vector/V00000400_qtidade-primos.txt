@@ -1,0 +1,38 @@
+#Escrever um algoritmo que lê um vetor V(10) e o escreve. 
+#Conte, a seguir, quantos valores de V são 
+#primos e escreva esta informação. 
+
+var
+  
+  v : vetor[0..9] de inteiro
+  i, x, divisor, contador : inteiro
+  
+inicio
+  
+  // Ler os valores
+  para i de 0 ate 9 faca
+    leia(v[i]) 
+    escreva(v[i]) 
+  fimpara
+  
+  contador <- 0 
+  
+  // Contando os primos
+  para i de 0 ate 9 faca
+    divisor <- 0 
+    
+    para x de 1 ate v[i] faca
+      se (v[i] % x = 0) entao
+        divisor <- divisor + 1 
+      fimse
+    fimpara
+    
+    se (divisor = 2) entao
+      contador <- contador + 1 
+    fimse
+    
+  fimpara
+  
+  escreva(contador) 
+  
+fimalgoritmo

@@ -1,0 +1,48 @@
+#Faça um algoritmo que leia os conceitos (1, 2, 3, 4 ou 5) dos alunos de uma turma de 20 alunos. 
+#Após, o algoritmo desenha um histograma com os conceitos na forma 111; 2222; 3333333333; 44; 5
+#se houveram três alunos com conceito 1, quatro com conceito 2, dez com conceito 3, dois com conceito 4 e um com conceito 5.
+
+var
+  
+  v : vetor[0..19] de inteiro
+  i : inteiro
+  
+inicio
+  
+  // Ler os valores
+  para i de 0 ate 19 faca
+    leia(v[i]) 
+  fimpara
+  
+  // Conferindo os conceitos e escrevendo o histograma
+  para i de 0 ate 19 faca
+    se (v[i] = 1) entao
+      escreva(1) 
+    fimse
+  fimpara
+  
+  para i de 0 ate 19 faca
+    se (v[i] = 2) entao
+      escreva(2) 
+    fimse
+  fimpara
+  
+  para i de 0 ate 19 faca
+    se (v[i] = 3) entao
+      escreva(3) 
+    fimse
+  fimpara
+  
+  para i de 0 ate 19 faca
+    se (v[i] = 4) entao
+      escreva(4) 
+    fimse
+  fimpara
+  
+  para i de 0 ate 19 faca
+    se (v[i] = 5) entao
+      escreva(5) 
+    fimse
+  fimpara
+  
+fimalgoritmo

@@ -1,0 +1,31 @@
+#Escrever um algoritmo que lê um vetor V(10) e o escreve. Conte, a seguir, quantos valores de V são 
+#negativos e escreva esta informação. 
+
+var
+  
+  v : vetor [0..9] de inteiro
+  i, contador : inteiro
+  
+inicio
+  
+  // Ler os valores
+  para i de 0 ate 9 faca
+    leia(v[i]) 
+  fimpara
+
+  // Escrever os valores
+  para i de 0 ate 9 faca
+    escreva(v[i]) 
+  fimpara
+  
+  // Conferindo se é ou não negativo
+  contador <- 0 
+  para i de 0 ate 9 faca
+    se v[i] < 0 entao
+      contador <- contador + 1 
+    fimse
+  fimpara
+  
+  escreva(contador) 
+  
+fimalgoritmo

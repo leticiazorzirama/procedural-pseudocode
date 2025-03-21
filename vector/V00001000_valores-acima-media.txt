@@ -1,0 +1,32 @@
+#Faça um algoritmo que leia 10 valores, calcule sua média e 
+#escreva os valores que estão acima da média calculada.
+
+var
+  
+  v : vetor[0..9] de inteiroi, soma : inteiro
+  media : real
+  
+inicio
+  
+  // Ler os valores
+  para i de 0 ate 9 faca
+    leia(v[i]) 
+  fimpara
+  
+  soma <- 0 
+  
+  // Calcula a soma dos elementos
+  para i de 0 ate 9 faca
+    soma <- soma + v[i] 
+  fimpara
+  
+  media <- soma /10 
+  
+  // Seleciona os que estão acima da média
+  para i de 0 ate 9 faca
+    se (v[i] > media) entao
+      escreva(v[i]) 
+    fimse
+  fimpara
+  
+fimalgoritmo
