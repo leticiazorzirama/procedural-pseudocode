@@ -4,7 +4,7 @@ The goal is to enhance *programming logic* and *mathematical reasoning skills*.
 
 ---
 
-## 📂 Repository Structure    
+## 📂 Contents
 The files are organized into the following algorithm categories:  
 - **Sequential (S)**: step-by-step instructions.  
 - **Conditional (C)**: decisions based on conditions.  
@@ -16,7 +16,7 @@ The files are organized into the following algorithm categories:
 
 ---
 
-## 🚀 How to Use  
+## 🛠️ Requirements 
 Each algorithm is saved in a .txt file, containing an identifier, the problem description, and the corresponding solution.  
 The algorithms can be executed in WebAlgo, which is stored in the tools-webalgo folder in this repository. Alternatively, you can simply view the .txt files.  
 WebAlgo requires JDK 16 to run. You can download it here: [Oracle JDK 16](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html).  
