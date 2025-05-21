@@ -1,7 +1,8 @@
 # Procedural Pseudocode  
---
 This repository contains solutions to problems from WebAlgo, a development environment for algorithms that uses **procedural** pseudocode.  
 The goal is to enhance *programming logic* and *mathematical reasoning skills*.  
+
+---
 
 ## 📂 Repository Structure    
 The files are organized into the following algorithm categories:  
