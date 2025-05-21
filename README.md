@@ -23,5 +23,5 @@ This repository is intended for learning and practicing *programming logic* and 
 
 ### 📌 Created and maintained by [Letícia Zorzi Rama](https://github.com/leticiazorzirama).  
 
-## 📄 License: **MIT License**. See the [LICENSE](LICENSE) file for details.
+### 📄 License: **MIT License**. See the [LICENSE](LICENSE) file for details.
 
